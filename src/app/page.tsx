@@ -158,7 +158,7 @@ export default function Page() {
                 FIX: Increased padding-top/bottom to py-20 md:py-32.
                 This makes the folder taller, giving horizontal elements MUCH more room to spread vertically.
              */}
-             <div className={`relative bg-[#FAF4E1] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-16 md:px-32 py-20 md:py-32 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
+             <div className={`relative bg-[#FFF0CA] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-16 md:px-32 py-20 md:py-32 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
                 
                 <div className="absolute inset-0 rounded-[18px] md:rounded-[24px] overflow-hidden pointer-events-none">
                    <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '12px 12px' }}></div>
@@ -967,13 +967,13 @@ export default function Page() {
                       Key Visual
                   </h3>
                   <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(59,91,53,0.2)] group">
-                      <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/cover%20tuyển%20gen.png" alt="Gen 20 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
+                      <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/cover%20tuyển%20gen.png" alt="Gen 20 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Avatar Badge */}
                   <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300 ">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#D9EBCB]">
-                          <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/avt%20tuyển%20gen.png" alt="Gen 20 Avatar" className="w-full h-full object-cover" />
+                          <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/avt%20tuyển%20gen.png" alt="Gen 20 Avatar" className="w-full h-full object-cover" />
                       </div>
                   </div>
               </div>
@@ -1093,13 +1093,13 @@ export default function Page() {
                       Key Visual
                   </h3>
                   <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(134,101,195,0.2)] group">
-                      <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/cover%20ti%CC%81m.png" alt="19th Anniversary Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
+                      <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/cover%20tím.png" alt="19th Anniversary Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Avatar Badge */}
                   <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#E3D5F2]">
-                          <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/AVT%20ti%CC%81m.png" alt="19th Avatar" className="w-full h-full object-cover" />
+                          <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/AVT%20tím.png" alt="19th Avatar" className="w-full h-full object-cover" />
                       </div>
                   </div>
               </div>
@@ -1112,8 +1112,8 @@ export default function Page() {
                   
                   <div className="columns-1 md:columns-2 gap-8 w-full max-w-5xl mx-auto">
                       {[
-                          { file: "FRAME tím.png", name: "Avatar Frame" },
-                          { file: "BACKDROP tím.png", name: "Event Backdrop" },
+                          { file: "FRAME tím.png", name: "Avatar Frame" },
+                          { file: "BACKDROP tím.png", name: "Event Backdrop" },
                           { file: "Social story.png", name: "Social Media Story" }
                       ].map((item, idx) => (
                           <div key={idx} className="break-inside-avoid mb-10 inline-block w-full flex flex-col items-center">
@@ -1179,9 +1179,9 @@ export default function Page() {
                       
                       <div className="columns-1 md:columns-3 gap-8 w-full">
                           {[
-                              { file: "phướn_1.png", name: "Vertical Banner 1" },
-                              { file: "phướn_Huyen.png", name: "Vertical Banner 2" },
-                              { file: "phướn_Thu.png", name: "Vertical Banner 3" }
+                              { file: "phướn_1.png", name: "Vertical Banner 1" },
+                              { file: "phướn_Huyen.png", name: "Vertical Banner 2" },
+                              { file: "phướn_Thu.png", name: "Vertical Banner 3" }
                           ].map((item, idx) => (
                               <div key={idx} className="flex flex-col items-center gap-5 mb-8 break-inside-avoid">
                                   <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
@@ -1320,7 +1320,7 @@ export default function Page() {
                       Key Visual
                   </h3>
                   <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(88,179,211,0.2)] group">
-                      <img src="/assets/portfolio_assets/CC%20FTU/Talkshow/KEY%20VISUAL/cover%20nè%2022.04.05.png" alt="Talkshow Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
+                      <img src="/assets/portfolio_assets/CC%20FTU/Talkshow/KEY%20VISUAL/cover%20nè%2022.04.05.png" alt="Talkshow Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Avatar Badge */}
@@ -1376,11 +1376,11 @@ export default function Page() {
 
               <div className="relative w-full max-w-[1100px] h-[650px] md:h-[800px] mx-auto mt-4 perspective-[1200px]">
                   {[
-    { title: "MÁC 1", images: ["/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 1/LOGO MỚI/1.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 1/LOGO MỚI/2.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 1/LOGO MỚI/3.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 1/LOGO MỚI/4.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 1/LOGO MỚI/5.png"] },
-    { title: "MÁC 2", images: ["/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 2/ẢNH 1 LOGO MỚI.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 2/ẢNH 2.png"] },
-    { title: "MÁC 3", images: ["/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 3/1 MỚI.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 3/2.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 3/3.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 3/4.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 3/5.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/Mác 3/6.png"] },
-    { title: "MÁC 4", images: ["/assets/portfolio_assets/ZODIAC COLLECTIONS/MÁC 4/MỚI.png"] },
-    { title: "MÁC 5", images: ["/assets/portfolio_assets/ZODIAC COLLECTIONS/MÁC 5/LOGO TRÒN MỚI/10.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/MÁC 5/LOGO TRÒN MỚI/6.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/MÁC 5/LOGO TRÒN MỚI/7.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/MÁC 5/LOGO TRÒN MỚI/8.png", "/assets/portfolio_assets/ZODIAC COLLECTIONS/MÁC 5/LOGO TRÒN MỚI/9.png"] },
+    { title: "MÁC 1", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/1.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/2.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/3.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/4.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/5.png"] },
+    { title: "MÁC 2", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%201%20LOGO%20MỚI.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%202.png"] },
+    { title: "MÁC 3", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/1%20MỚI.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/2.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/3.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/4.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/5.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/6.png"] },
+    { title: "MÁC 4", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%204/MỚI.png"] },
+    { title: "MÁC 5", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/10.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/6.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/7.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/8.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/9.png"] },
   ].map((page, idx) => {
                       let diff = idx - activeZodiacPage;
                       let translateX = "0px"; let translateY = "0px"; let rotate = "0deg"; let opacity = 1; let zIndex = 20 - idx; let pointerEvents = "auto"; let scale = 1;
@@ -1583,7 +1583,7 @@ export default function Page() {
                 FIX: Increased padding-top/bottom to py-20 md:py-32.
                 This makes the folder taller, giving horizontal elements MUCH more room to spread vertically.
              */}
-             <div className={`relative bg-[#FAF4E1] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-16 md:px-32 py-16 md:py-24 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
+             <div className={`relative bg-[#FFF0CA] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-16 md:px-32 py-16 md:py-24 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
                 
                 <div className="absolute inset-0 rounded-[18px] md:rounded-[24px] overflow-hidden pointer-events-none">
                    <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '12px 12px' }}></div>
