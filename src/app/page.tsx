@@ -688,7 +688,7 @@ export default function Page() {
                     </div>
                     
                     <div className="w-[160px] h-[160px] rounded-[36px] shadow-[0_15px_40px_rgba(0,0,0,0.08)] shrink-0 overflow-hidden bg-white border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
-                       <img  src="/assets/portfolio_assets/Yapsu%20AI/yapsu_icon_premium.png" className="w-full h-full object-cover" />
+                       <img  src="/assets/portfolio_assets/Yapsu%20AI/yapsu_icon_premium.jpg" className="w-full h-full object-cover" />
                     </div>
                  </div>
                  
@@ -878,13 +878,13 @@ export default function Page() {
                 Key Visual
             </h3>
             <div className="relative w-full max-w-5xl rounded-[24px] overflow-hidden border-2 border-cyan-500/50 shadow-[0_0_40px_rgba(34,211,238,0.2)]">
-                <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/KEY%20VISUAL/cover%20tbth.png" alt="Chinese Debate Key Visual Cover" className="w-full h-auto block" />
+                <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/KEY%20VISUAL/cover%20tbth.jpg" alt="Chinese Debate Key Visual Cover" className="w-full h-auto block" />
             </div>
             
             {/* Avatar Badge */}
             <div className="relative -mt-16 w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-gradient-to-br from-cyan-400 to-blue-600 shadow-[0_0_30px_rgba(34,211,238,0.5)] z-10 group hover:-translate-y-2 transition-transform duration-300">
                 <div className="w-full h-full rounded-full overflow-hidden bg-[#06112E]">
-                    <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/KEY%20VISUAL/avatar-01.png" alt="Chinese Debate Avatar" className="w-full h-full object-cover" />
+                    <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/KEY%20VISUAL/avatar-01.jpg" alt="Chinese Debate Avatar" className="w-full h-full object-cover" />
                 </div>
             </div>
         </div>
@@ -898,14 +898,14 @@ export default function Page() {
                 {/* Backdrop */}
                 <div className="flex flex-col items-center gap-5">
                     <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-cyan-900/60 hover:border-cyan-400/80 transition-colors duration-500 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
-                        <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Print%20&%20Event%20Applications/Backdrop-01.png" alt="Backdrop Design" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
+                        <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Print%20&%20Event%20Applications/Backdrop-01.jpg" alt="Backdrop Design" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
                     </div>
                     <h4 className="font-['Quicksand'] font-bold text-xl text-cyan-300 tracking-wider uppercase drop-shadow-md">Stage Backdrop</h4>
                 </div>
                 {/* Ticket */}
                 <div className="flex flex-col items-center gap-5">
                     <div className="relative group w-full max-w-3xl mx-auto rounded-[24px] overflow-hidden border-2 border-cyan-900/60 hover:border-cyan-400/80 transition-colors duration-500 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
-                        <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Print%20&%20Event%20Applications/TICKET.png" alt="Event Ticket" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700 drop-shadow-xl" />
+                        <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Print%20&%20Event%20Applications/TICKET.jpg" alt="Event Ticket" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700 drop-shadow-xl" />
                     </div>
                     <h4 className="font-['Quicksand'] font-bold text-xl text-cyan-300 tracking-wider uppercase drop-shadow-md">Event Ticket</h4>
                 </div>
@@ -928,14 +928,14 @@ export default function Page() {
 
                 {/* Social Posts */}
                 {[
-                    "Công bố quán quân.png", 
-                    "GIA HẠN ĐƠN ĐĂNG KÝ.png", 
-                    "Công bố Á quân.png", 
-                    "Post giới thiệu đại sứ truyền thông.png", 
-                    "Post mở đơn.png"
+                    "Công bố quán quân.jpg", 
+                    "GIA HẠN ĐƠN ĐĂNG KÝ.jpg", 
+                    "Công bố Á quân.jpg", 
+                    "Post giới thiệu đại sứ truyền thông.jpg", 
+                    "Post mở đơn.jpg"
                 ].map((filename, idx) => (
                     <div key={idx} className="relative rounded-[20px] overflow-hidden border-2 border-blue-900/60 group hover:border-cyan-400/80 transition-colors duration-300 shadow-md break-inside-avoid mb-6 inline-block w-full">
-                        <img  src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Social%20Posts/${filename}`} alt={filename.replace('.png', '')} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500" />
+                        <img  src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Social%20Posts/${filename}`} alt={filename.replace('.jpg', '')} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500" />
                     </div>
                 ))}
             </div>
@@ -967,13 +967,13 @@ export default function Page() {
                       Key Visual
                   </h3>
                   <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(59,91,53,0.2)] group">
-                      <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/cover%20tuyển%20gen.png" alt="Gen 20 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
+                      <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/cover%20tuyển%20gen.jpg" alt="Gen 20 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Avatar Badge */}
                   <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300 ">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#D9EBCB]">
-                          <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/avt%20tuyển%20gen.png" alt="Gen 20 Avatar" className="w-full h-full object-cover" />
+                          <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/avt%20tuyển%20gen.jpg" alt="Gen 20 Avatar" className="w-full h-full object-cover" />
                       </div>
                   </div>
               </div>
@@ -985,7 +985,7 @@ export default function Page() {
                   </h3>
                   <div className="w-full max-w-lg flex flex-col items-center gap-6">
                       <div className="relative group w-full rounded-[24px] overflow-hidden border-[6px] border-white shadow-[0_15px_40px_rgba(59,91,53,0.15)] hover:shadow-[0_25px_50px_rgba(59,91,53,0.25)] transition-all duration-500 ">
-                          <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/Print%20&%20Event%20Applications/frame.png" alt="Avatar Frame" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
+                          <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/Print%20&%20Event%20Applications/frame.jpg" alt="Avatar Frame" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
                       </div>
                       <h4 className="font-['Quicksand'] font-bold text-xl text-[#3B5B35] tracking-wider uppercase mt-4">Avatar Frame</h4>
                   </div>
@@ -1001,10 +1001,10 @@ export default function Page() {
                       {/* Carousel Container */}
                       <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-hidden">
                           {[
-                              "Q&A.png", 
-                              "THÔNG BÁO KẾT QUẢ.png", 
-                              "VIRAL POST.png", 
-                              "Đóng đơn đăng ký.png"
+                              "Q&A.jpg", 
+                              "THÔNG BÁO KẾT QUẢ.jpg", 
+                              "VIRAL POST.jpg", 
+                              "Đóng đơn đăng ký.jpg"
                           ].map((filename, idx) => {
                               let diff = idx - activeGen20Idx;
                               if (diff === 3) diff = -1;
@@ -1059,7 +1059,7 @@ export default function Page() {
                                           filter: `blur(${blur})`
                                       }}
                                   >
-                                      <img  src={`/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/SOCIAL%20POST/${filename}`} alt={filename.replace('.png', '')} className="h-[280px] sm:h-[350px] md:h-[420px] w-auto max-w-none block object-contain" />
+                                      <img  src={`/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/SOCIAL%20POST/${filename}`} alt={filename.replace('.jpg', '')} className="h-[280px] sm:h-[350px] md:h-[420px] w-auto max-w-none block object-contain" />
                                   </div>
                               );
                           })}
@@ -1093,13 +1093,13 @@ export default function Page() {
                       Key Visual
                   </h3>
                   <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(134,101,195,0.2)] group">
-                      <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/cover%20tím.png" alt="19th Anniversary Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
+                      <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/cover%20tím.jpg" alt="19th Anniversary Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Avatar Badge */}
                   <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#E3D5F2]">
-                          <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/AVT%20tím.png" alt="19th Avatar" className="w-full h-full object-cover" />
+                          <img  src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/AVT%20tím.jpg" alt="19th Avatar" className="w-full h-full object-cover" />
                       </div>
                   </div>
               </div>
@@ -1112,9 +1112,9 @@ export default function Page() {
                   
                   <div className="columns-1 md:columns-2 gap-8 w-full max-w-4xl mx-auto">
                       {[
-                          { file: "FRAME tím.png", name: "Avatar Frame" },
-                          { file: "BACKDROP tím.png", name: "Event Backdrop" },
-                          { file: "Social story.png", name: "Social Media Story" }
+                          { file: "FRAME tím.jpg", name: "Avatar Frame" },
+                          { file: "BACKDROP tím.jpg", name: "Event Backdrop" },
+                          { file: "Social story.jpg", name: "Social Media Story" }
                       ].map((item, idx) => (
                           <div key={idx} className="break-inside-avoid flex flex-col items-center w-full mb-8">
                               <div className="relative rounded-[24px] overflow-hidden border-[6px] border-white group hover:border-[#8665C3] transition-colors duration-300 shadow-lg w-full mb-4">
@@ -1152,13 +1152,13 @@ export default function Page() {
                       Key Visual
                   </h3>
                   <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.3)] group">
-                      <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/KEY%20VISUAL/cover%20tbth1.png" alt="Debate 2025 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
+                      <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/KEY%20VISUAL/cover%20tbth1.jpg" alt="Debate 2025 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Avatar Badge */}
                   <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.4)] z-10 group hover:-translate-y-2 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#231710]">
-                          <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/KEY%20VISUAL/AVATAR%20TBTH.png" alt="Debate Avatar" className="w-full h-full object-cover" />
+                          <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/KEY%20VISUAL/AVATAR%20TBTH.jpg" alt="Debate Avatar" className="w-full h-full object-cover" />
                       </div>
                   </div>
               </div>
@@ -1172,16 +1172,16 @@ export default function Page() {
                   <div className="w-full max-w-5xl flex flex-col gap-16">
                       <div className="flex flex-col items-center gap-5">
                           <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
-                              <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Print%20&%20Event%20Applications/BACKDROP.png" alt="Event Backdrop" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
+                              <img  src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Print%20&%20Event%20Applications/BACKDROP.jpg" alt="Event Backdrop" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
                           </div>
                           <h4 className="font-['Quicksand'] font-bold text-xl text-[#FFF2B2] tracking-wider uppercase drop-shadow-md">Stage Backdrop</h4>
                       </div>
                       
                       <div className="columns-1 md:columns-3 gap-8 w-full">
                           {[
-                              { file: "phướn_1.png", name: "Vertical Banner 1" },
-                              { file: "phướn_Huyen.png", name: "Vertical Banner 2" },
-                              { file: "phướn_Thu.png", name: "Vertical Banner 3" }
+                              { file: "phướn_1.jpg", name: "Vertical Banner 1" },
+                              { file: "phướn_Huyen.jpg", name: "Vertical Banner 2" },
+                              { file: "phướn_Thu.jpg", name: "Vertical Banner 3" }
                           ].map((item, idx) => (
                               <div key={idx} className="flex flex-col items-center gap-5 mb-8 break-inside-avoid">
                                   <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
@@ -1202,16 +1202,16 @@ export default function Page() {
                   
                   <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center">
                       {[
-                          "MỞ ĐƠN.png",
-                          "THÔNG BÁO QUÁN QUÂN.png",
-                          "THỂ LỆ VÒNG SƠ KHẢO.png",
-                          "THÔNG BÁO CƠ CẤU GIẢI THƯỞNG.png",
-                          "QUYỀN LỢI KHI THAM GIA CUỘC THI.png",
-                          "TỪ KHOÁ VÒNG CHUNG KẾT CUỘC THI.png",
-                          "GIỚI THIỆU BẢO TRỢ TRUYỀN THÔNG.png",
-                          "GIỚI THIỆU ĐỐI TÁC TRUYỀN THÔNG.png",
-                          "GIỚI THIỆU NTT-1.png",
-                          "GIỚI THIỆU NTT-2.png"
+                          "MỞ ĐƠN.jpg",
+                          "THÔNG BÁO QUÁN QUÂN.jpg",
+                          "THỂ LỆ VÒNG SƠ KHẢO.jpg",
+                          "THÔNG BÁO CƠ CẤU GIẢI THƯỞNG.jpg",
+                          "QUYỀN LỢI KHI THAM GIA CUỘC THI.jpg",
+                          "TỪ KHOÁ VÒNG CHUNG KẾT CUỘC THI.jpg",
+                          "GIỚI THIỆU BẢO TRỢ TRUYỀN THÔNG.jpg",
+                          "GIỚI THIỆU ĐỐI TÁC TRUYỀN THÔNG.jpg",
+                          "GIỚI THIỆU NTT-1.jpg",
+                          "GIỚI THIỆU NTT-2.jpg"
                       ].map((filename, idx) => {
                           let diff = idx - activeDebateIdx;
                           if (diff > 5) diff -= 10;
@@ -1268,7 +1268,7 @@ export default function Page() {
                                       pointerEvents: pointerEvents as any
                                   }}
                               >
-                                  <img  src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Social%20Posts/${filename}`} alt={filename.replace('.png', '')} className="h-[280px] sm:h-[350px] md:h-[420px] w-auto max-w-none block object-contain" />
+                                  <img  src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Social%20Posts/${filename}`} alt={filename.replace('.jpg', '')} className="h-[280px] sm:h-[350px] md:h-[420px] w-auto max-w-none block object-contain" />
                               </div>
                           );
                       })}
@@ -1320,7 +1320,7 @@ export default function Page() {
                       Key Visual
                   </h3>
                   <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(88,179,211,0.2)] group">
-                      <img  src="/assets/portfolio_assets/CC%20FTU/Talkshow/KEY%20VISUAL/cover%20nè%2022.04.05.png" alt="Talkshow Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
+                      <img  src="/assets/portfolio_assets/CC%20FTU/Talkshow/KEY%20VISUAL/cover%20nè%2022.04.05.jpg" alt="Talkshow Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Avatar Badge */}
@@ -1339,14 +1339,14 @@ export default function Page() {
                   
                   <div className="flex flex-wrap justify-center gap-6 w-full max-w-[1200px] mx-auto">
                       {[
-                          "NTT-04.png",
-                          "NTT-01.png",
-                          "NTT-02.png",
-                          "NTT-03.png",
-                          "Thông báo danh sách nhận ĐRL.png"
+                          "NTT-04.jpg",
+                          "NTT-01.jpg",
+                          "NTT-02.jpg",
+                          "NTT-03.jpg",
+                          "Thông báo danh sách nhận ĐRL.jpg"
                       ].map((filename, idx) => (
                           <div key={idx} className="relative rounded-[16px] overflow-hidden border-[4px] border-white shadow-[0_15px_30px_rgba(88,179,211,0.15)] group hover:border-[#8DD1E8] transition-colors duration-300 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0">
-                              <img src={`/assets/portfolio_assets/CC%20FTU/Talkshow/SOCIAL%20POST/${filename}`} alt={filename.replace('.png', '')} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500"  />
+                              <img src={`/assets/portfolio_assets/CC%20FTU/Talkshow/SOCIAL%20POST/${filename}`} alt={filename.replace('.jpg', '')} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500"  />
                           </div>
                       ))}
                   </div>
@@ -1376,11 +1376,11 @@ export default function Page() {
 
               <div className="relative w-full max-w-[1100px] h-[650px] md:h-[800px] mx-auto mt-4 perspective-[1200px]">
                   {[
-    { title: "MÁC 1", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/1.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/2.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/3.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/4.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/5.png"] },
-    { title: "MÁC 2", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%201%20LOGO%20MỚI.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%202.png"] },
-    { title: "MÁC 3", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/1%20MỚI.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/2.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/3.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/4.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/5.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/6.png"] },
-    { title: "MÁC 4", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%204/MỚI.png"] },
-    { title: "MÁC 5", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/10.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/6.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/7.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/8.png", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/9.png"] },
+    { title: "MÁC 1", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/1.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/2.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/3.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/4.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/5.jpg"] },
+    { title: "MÁC 2", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%201%20LOGO%20MỚI.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%202.jpg"] },
+    { title: "MÁC 3", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/1%20MỚI.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/2.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/3.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/4.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/5.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%203/6.jpg"] },
+    { title: "MÁC 4", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%204/MỚI.jpg"] },
+    { title: "MÁC 5", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/10.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/6.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/7.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/8.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/MÁC%205/LOGO%20TRÒN%20MỚI/9.jpg"] },
   ].map((page, idx) => {
                       let diff = idx - activeZodiacPage;
                       let translateX = "0px"; let translateY = "0px"; let rotate = "0deg"; let opacity = 1; let zIndex = 20 - idx; let pointerEvents = "auto"; let scale = 1;
@@ -1500,7 +1500,7 @@ export default function Page() {
                       {/* Template Story — same height, border hugs naturally */}
                       <div className="flex flex-col items-center gap-4">
                           <div className="rounded-[24px] overflow-hidden border-[4px] border-white shadow-lg group hover:border-[#3A7FB5] transition-colors duration-300" style={{ height: '452px' }}>
-                              <img  src="/assets/portfolio_assets/PAINTASO/Print%20&%20Event%20Applications/TEMPLATES%20STORY.png" alt="Templates Story" style={{ height: '100%', width: 'auto', display: 'block' }} className="group-hover:scale-105 transition-transform duration-500" />
+                              <img  src="/assets/portfolio_assets/PAINTASO/Print%20&%20Event%20Applications/TEMPLATES%20STORY.jpg" alt="Templates Story" style={{ height: '100%', width: 'auto', display: 'block' }} className="group-hover:scale-105 transition-transform duration-500" />
                           </div>
                           <h4 className="font-['Quicksand'] font-bold text-lg text-[#3A7FB5] tracking-wider uppercase text-center bg-white/60 px-6 py-2 rounded-full shadow-sm">Templates Story</h4>
                       </div>
@@ -1526,12 +1526,12 @@ export default function Page() {
                       </div>
                       {/* Image posts */}
                       {[
-                          "SOCIAL POST GIỚI THIỆU SẢN PHẨM.png",
-                          "SOCIAL POST MỤC ĐÍCH WORKSHOP_.png",
-                          "SOCIAL POST QUYỀN LỢI KHI THAM GIA WORKSHOP.png",
+                          "SOCIAL POST GIỚI THIỆU SẢN PHẨM.jpg",
+                          "SOCIAL POST MỤC ĐÍCH WORKSHOP_.jpg",
+                          "SOCIAL POST QUYỀN LỢI KHI THAM GIA WORKSHOP.jpg",
                       ].map((filename, idx) => (
                           <div key={idx} className="relative rounded-[20px] overflow-hidden border-[4px] border-white group hover:border-[#3A7FB5] transition-colors duration-300 shadow-md break-inside-avoid mb-6 inline-block w-full" style={{ lineHeight: 0 }}>
-                              <img src={`/assets/portfolio_assets/PAINTASO/SOCIAL%20POSTS/${filename}`} alt={filename.replace('.png', '')} style={{ width: '100%', display: 'block' }}  className="group-hover:scale-105 transition-transform duration-500" />
+                              <img src={`/assets/portfolio_assets/PAINTASO/SOCIAL%20POSTS/${filename}`} alt={filename.replace('.jpg', '')} style={{ width: '100%', display: 'block' }}  className="group-hover:scale-105 transition-transform duration-500" />
                           </div>
                       ))}
                   </div>
