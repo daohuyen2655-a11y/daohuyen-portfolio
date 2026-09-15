@@ -1412,8 +1412,8 @@ export default function Page() {
                               <div className="w-full">
                                   <div style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'auto', gap: '24px', paddingBottom: '16px', scrollbarWidth: 'none', msOverflowStyle: 'none' } as any} className="zodiac-scroll-container">
                                       {page.images.map((img, i) => (
-                                          <div key={i} style={{ width: '280px', flexShrink: 0, borderRadius: '12px', overflow: 'hidden', border: '2px solid #F2EFEA', background: 'white', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }} className="hover:scale-[1.02] transition-transform duration-300">
-                                              <img src={img} alt="Zodiac Collection" style={{ width: '100%', height: 'auto', display: 'block' }} loading="lazy" />
+                                          <div key={i} style={{ flexShrink: 0, borderRadius: '12px', overflow: 'hidden', border: '2px solid #F2EFEA', background: 'white', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }} className="h-[360px] md:h-[460px] hover:scale-[1.02] transition-transform duration-300">
+                                              <img src={img} alt="Zodiac Collection" style={{ height: '100%', width: 'auto', display: 'block' }} loading="lazy" />
                                           </div>
                                       ))}
                                   </div>
