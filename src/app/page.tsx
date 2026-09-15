@@ -1110,13 +1110,13 @@ export default function Page() {
                       Event Applications
                   </h3>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mx-auto items-center">
+                  <div className="columns-1 md:columns-2 gap-8 w-full max-w-4xl mx-auto">
                       {[
                           { file: "FRAME tím.png", name: "Avatar Frame" },
                           { file: "BACKDROP tím.png", name: "Event Backdrop" },
                           { file: "Social story.png", name: "Social Media Story" }
                       ].map((item, idx) => (
-                          <div key={idx} className="flex flex-col items-center w-full">
+                          <div key={idx} className="break-inside-avoid flex flex-col items-center w-full mb-8">
                               <div className="relative rounded-[24px] overflow-hidden border-[6px] border-white group hover:border-[#8665C3] transition-colors duration-300 shadow-lg w-full mb-4">
                                   <img loading="lazy" src={`/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Print%20&%20Event%20Applications/${item.file}`} alt={item.name} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500" />
                               </div>
