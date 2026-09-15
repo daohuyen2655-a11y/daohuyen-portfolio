@@ -1411,9 +1411,9 @@ export default function Page() {
                               {/* PRECISE USER LAYOUT */}
                               <div className="w-full">
                                   {(page.title === "MÁC 1" || page.title === "MÁC 3") ? (
-                                      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', gap: '12px', maxWidth: '430px' }}>
+                                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', width: '100%', maxWidth: '900px', margin: '0 auto' }}>
                                           {page.images.map((img, i) => (
-                                              <div key={i} style={{ width: '130px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #F2EFEA', background: 'white', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                                              <div key={i} style={{ width: '100%', borderRadius: '12px', overflow: 'hidden', border: '2px solid #F2EFEA', background: 'white', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}>
                                                   <img src={img} alt="Zodiac Collection" style={{ width: '100%', height: 'auto', display: 'block' }} loading="lazy" />
                                               </div>
                                           ))}
