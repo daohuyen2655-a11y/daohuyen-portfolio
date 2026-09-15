@@ -1283,6 +1283,8 @@ export default function Page() {
                   <div className="w-full max-w-4xl relative rounded-[24px] overflow-hidden border-[4px] border-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.3)] bg-black">
                       <video 
                           src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Video/THỂ%20LỆ%20VÒNG%20CHUNG%20KẾT.mp4"
+                          autoPlay
+                          playsInline
                           controls
                           muted
                           loop
