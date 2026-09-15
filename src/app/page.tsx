@@ -1110,13 +1110,13 @@ export default function Page() {
                       Event Applications
                   </h3>
                   
-                  <div className="columns-1 md:columns-2 gap-8 w-full max-w-5xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mx-auto items-center">
                       {[
                           { file: "FRAME tím.png", name: "Avatar Frame" },
                           { file: "BACKDROP tím.png", name: "Event Backdrop" },
                           { file: "Social story.png", name: "Social Media Story" }
                       ].map((item, idx) => (
-                          <div key={idx} className="break-inside-avoid mb-10 inline-block w-full flex flex-col items-center">
+                          <div key={idx} className="flex flex-col items-center w-full">
                               <div className="relative rounded-[24px] overflow-hidden border-[6px] border-white group hover:border-[#8665C3] transition-colors duration-300 shadow-lg w-full mb-4">
                                   <img loading="lazy" src={`/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Print%20&%20Event%20Applications/${item.file}`} alt={item.name} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500" />
                               </div>
@@ -1412,7 +1412,7 @@ export default function Page() {
                               <div className="w-full">
                                   <div style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'auto', gap: '24px', paddingBottom: '16px', scrollbarWidth: 'none', msOverflowStyle: 'none' } as any} className="zodiac-scroll-container">
                                       {page.images.map((img, i) => (
-                                          <div key={i} style={{ flexShrink: 0, borderRadius: '12px', overflow: 'hidden', border: '2px solid #F2EFEA', background: 'white', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }} className="h-[360px] md:h-[460px] hover:scale-[1.02] transition-transform duration-300">
+                                          <div key={i} style={{ flexShrink: 0, borderRadius: '12px', overflow: 'hidden', border: '2px solid #F2EFEA', background: 'white', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }} className="h-[450px] md:h-[580px] hover:scale-[1.02] transition-transform duration-300">
                                               <img src={img} alt="Zodiac Collection" style={{ height: '100%', width: 'auto', display: 'block' }} loading="lazy" />
                                           </div>
                                       ))}
