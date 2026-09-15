@@ -555,7 +555,7 @@ export default function Page() {
                                 <h4 className="font-['Fredoka'] font-black text-3xl md:text-4xl text-[#D8683E] mb-2 leading-tight" style={{textShadow: '-2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, 4px 4px 0px rgba(0,0,0,0.1)'}}>Other Activities</h4>
                                 <ul className="list-disc ml-5 font-bold text-lg opacity-90 space-y-1">
                                    <li><span className="opacity-80">GYPP Vietnam -</span> Media Ambassador</li>
-                                   <li><span className="opacity-80">The Fallen Project -</span> Member</li>
+                                   <li><span className="opacity-80">The Fallen Project -</span> Head of Public Relations</li>
                                    <li><span className="opacity-80">LOGIA Debate Club -</span> Member</li>
                                    <li><span className="opacity-80">The Kori Project -</span> Member</li>
                                 </ul>
