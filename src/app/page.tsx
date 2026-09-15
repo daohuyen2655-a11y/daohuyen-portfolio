@@ -823,9 +823,9 @@ export default function Page() {
                  <div className="flex flex-col lg:flex-row justify-center items-center gap-16 w-full mt-0">
                     
                     {[
-                       { title: "Onboarding", src: "Onboarding Feature.MP4" },
-                       { title: "Roleplay", src: "Roleplay Feature.MP4" },
-                       { title: "Roadmap", src: "Roadmap + Drill Feature.mov" }
+                       { title: "Onboarding", src: "onboarding-feature.mp4" },
+                       { title: "Roleplay", src: "roleplay-feature.mp4" },
+                       { title: "Roadmap", src: "roadmap-drill-feature.mov" }
                     ].map((vid, idx) => (
                        <div key={idx} className="flex flex-col items-center">
                           
@@ -838,7 +838,7 @@ export default function Page() {
                           <div className="relative w-[310px] h-[660px] rounded-[52px] p-[8px] bg-white border border-gray-200 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)]" style={{ WebkitBoxReflect: "below 12px linear-gradient(transparent 60%, rgba(255,255,255,0.4))" }}>
                              <div className="w-full h-full bg-gray-50 rounded-[44px] overflow-hidden relative border border-gray-100 shadow-[inset_0_0_10px_rgba(0,0,0,0.05)]">
                                 <div className="absolute top-[14px] left-1/2 -translate-x-1/2 w-[100px] h-[30px] bg-black rounded-full z-20"></div>
-                                <video src={`/assets/portfolio_assets/Yapsu AI/${vid.src}`} autoPlay muted loop playsInline className="w-full h-full object-cover" />
+                                <video src={`/assets/yapsu-ai/${vid.src}`} autoPlay muted loop playsInline className="w-full h-full object-cover" />
                              </div>
                           </div>
                           
