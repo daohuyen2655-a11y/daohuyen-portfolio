@@ -177,7 +177,7 @@ export default function Page() {
                 </div>
 
                 {/* Grouped Text + Name Tag */}
-                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg]`}>
+                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg] -translate-y-6 md:-translate-y-8`}>
                    
                    <h1 className="text-[60px] sm:text-[150px] md:text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
                       Portfolio
@@ -199,7 +199,7 @@ export default function Page() {
                 {/* ─── STICKERS (FIX: SPREAD OUT AND SCALED APPROPRIATELY) ─── */}
                 
                 {/* 1. Yellow Asterisk - Pushed out further left */}
-                <div className={`absolute -left-[70px] md:-left-[100px] top-[15%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''}`}>
+                <div className={`absolute -left-[70px] md:-left-[100px] top-[15%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float-delayed hover:scale-125 transition-transform duration-500 cursor-pointer">
                       <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-md">
                         <g fill="none" stroke="#F9DB82" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round">
@@ -212,7 +212,7 @@ export default function Page() {
                 </div>
 
                 {/* 2. Orange Cursor Arrow - Pushed down and left */}
-                <div className={`absolute -left-[50px] md:-left-[70px] bottom-[10%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
+                <div className={`absolute -left-[50px] md:-left-[70px] bottom-[10%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float rotate-[-15deg] cursor-pointer hover:rotate-0 transition-transform">
                       <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
                         <path d="M 25 15 L 25 80 L 45 60 L 65 90 L 80 80 L 60 50 L 90 50 Z" fill="#F3A765" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
@@ -221,8 +221,8 @@ export default function Page() {
                 </div>
 
                 {/* 3. Clover Stamp - Pushed down to clear Portfolio text */}
-                <div className={`absolute left-[30%] md:left-[35%] -bottom-[80px] md:-bottom-[100px] rotate-[-5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
-                   <div className="relative w-[130px] h-[150px] md:w-[150px] md:h-[170px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
+                <div className={`absolute left-[30%] md:left-[35%] -bottom-[80px] md:-bottom-[100px] rotate-[-5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
+                   <div className="relative w-[110px] h-[130px] md:w-[130px] md:h-[150px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
                       <div className="absolute inset-0 bg-white stamp-mask shadow-[0_10px_20px_rgba(0,0,0,0.1)]"></div>
                       <div className="absolute inset-[10px] border-[1.5px] border-[#EEE] z-10 pointer-events-none rounded-[4px]"></div>
 
@@ -248,7 +248,7 @@ export default function Page() {
                 </div>
 
                 {/* 4. Ai Puffy Star - Far Top Right */}
-                <div className={`absolute -right-[40px] md:-right-[60px] -top-[40px] md:-top-[60px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''}`}>
+                <div className={`absolute -right-[40px] md:-right-[60px] -top-[40px] md:-top-[60px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,15 61,38 86,41 68,58 74,84 50,70 26,84 32,58 14,41 39,38" fill="#F1934B" stroke="white" strokeWidth="8" strokeLinejoin="round"/>
@@ -258,7 +258,7 @@ export default function Page() {
                 </div>
 
                 {/* 5. Leaf Blob - Spread to top 15% */}
-                <div className={`absolute -right-[60px] md:-right-[100px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''}`}>
+                <div className={`absolute -right-[60px] md:-right-[100px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
                       <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,10 65,30 90,30 75,50 85,75 50,65 15,75 25,50 10,30 35,30" fill="#B5D799" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
@@ -268,7 +268,7 @@ export default function Page() {
                 </div>
 
                 {/* 6. Figma Logo - Spread to top 42% */}
-                <div className={`absolute -right-[50px] md:-right-[80px] top-[42%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''}`}>
+                <div className={`absolute -right-[50px] md:-right-[80px] top-[42%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
                          <rect x="15" y="15" width="70" height="70" rx="16" fill="#CDE7BC" stroke="white" strokeWidth="6"/>
@@ -284,7 +284,7 @@ export default function Page() {
                 </div>
 
                 {/* 7. Blender Logo - Spread to top 70% */}
-                <div className={`absolute -right-[40px] md:-right-[90px] top-[70%] rotate-[5deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1100' : ''}`}>
+                <div className={`absolute -right-[40px] md:-right-[90px] top-[70%] rotate-[5deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1100' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
                       <svg width="90" height="90" viewBox="0 0 100 100" className="drop-shadow-md">
                          <path d="M50,15 C60,15 65,30 75,35 C90,40 95,50 90,65 C85,75 75,85 60,85 C50,85 35,85 25,75 C15,65 15,50 25,35 C35,30 40,15 50,15 Z" fill="#F1934B" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
@@ -296,7 +296,7 @@ export default function Page() {
                 </div>
 
                 {/* 8. Ps Sticker - Pushed far bottom right */}
-                <div className={`absolute right-[-5px] md:right-[-25px] -bottom-[40px] md:-bottom-[50px] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
+                <div className={`absolute right-[-5px] md:right-[-25px] -bottom-[40px] md:-bottom-[50px] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="90" height="90" viewBox="0 0 100 100" className="drop-shadow-md">
                          <circle cx="50" cy="50" r="40" fill="#89B66B" stroke="white" strokeWidth="6"/>
@@ -1609,7 +1609,7 @@ export default function Page() {
                 {/* ─── STICKERS (FIX: NO WHITE BORDERS, EXACT POSITIONS) ─── */}
                 
                 {/* 1. Yellow Asterisk - Pushed out further left */}
-                <div className={`absolute -left-[50px] md:-left-[80px] top-[25%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''}`}>
+                <div className={`absolute -left-[50px] md:-left-[80px] top-[25%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float-delayed hover:scale-125 transition-transform duration-500 cursor-pointer">
                       <svg width="80" height="80" viewBox="0 0 100 100" className="drop-shadow-md">
                         <g fill="none" stroke="#F9DB82" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
@@ -1623,7 +1623,7 @@ export default function Page() {
 
 
                 {/* 3. Clover Stamp - Right Edge */}
-                <div className={`absolute -right-[20px] md:-right-[40px] -bottom-[40px] md:-bottom-[50px] rotate-[5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
+                <div className={`absolute -right-[20px] md:-right-[40px] -bottom-[40px] md:-bottom-[50px] rotate-[5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
                    <div className="relative w-[90px] h-[110px] md:w-[110px] md:h-[130px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
                       <div className="absolute inset-0 bg-white stamp-mask shadow-[0_10px_20px_rgba(0,0,0,0.1)]"></div>
                       <div className="absolute inset-[10px] border-[1.5px] border-[#EEE] z-10 pointer-events-none rounded-[4px]"></div>
@@ -1650,7 +1650,7 @@ export default function Page() {
                 </div>
 
                 {/* 4. Ai Puffy Star - Top Right */}
-                <div className={`absolute right-[-20px] md:right-[5%] -top-[30px] md:-top-[40px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''}`}>
+                <div className={`absolute right-[-20px] md:right-[5%] -top-[30px] md:-top-[40px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="80" height="80" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,15 61,38 86,41 68,58 74,84 50,70 26,84 32,58 14,41 39,38" fill="#F1934B" stroke="none"/>
@@ -1660,7 +1660,7 @@ export default function Page() {
                 </div>
 
                 {/* 5. Leaf Blob - Spread to top 15% */}
-                <div className={`absolute -right-[40px] md:-right-[60px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''}`}>
+                <div className={`absolute -right-[40px] md:-right-[60px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
                       <svg width="75" height="75" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,10 65,30 90,30 75,50 85,75 50,65 15,75 25,50 10,30 35,30" fill="#74A352" stroke="none"/>
@@ -1670,7 +1670,7 @@ export default function Page() {
                 </div>
 
                 {/* 6. Figma Logo - Right side */}
-                <div className={`absolute -right-[30px] md:-right-[50px] top-[45%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''}`}>
+                <div className={`absolute -right-[30px] md:-right-[50px] top-[45%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="75" height="75" viewBox="0 0 100 100" className="drop-shadow-md">
                          <circle cx="50" cy="50" r="40" fill="#FFE885" stroke="#89B66B" strokeWidth="4"/>
@@ -1687,7 +1687,7 @@ export default function Page() {
 
 
                 {/* 8. Ps Sticker - Bottom Left edge */}
-                <div className={`absolute -left-[40px] md:-left-[60px] bottom-[25%] md:bottom-[30%] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
+                <div className={`absolute -left-[40px] md:-left-[60px] bottom-[25%] md:bottom-[30%] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="80" height="80" viewBox="0 0 100 100" className="drop-shadow-md">
                          <circle cx="50" cy="50" r="40" fill="#74A352" stroke="none"/>
