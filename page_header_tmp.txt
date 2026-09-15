@@ -1,0 +1,646 @@
+
+"use client";
+import React, { useState, useEffect } from 'react';
+
+export default function Page() {
+  const [mounted, setMounted] = useState(false);
+  const [entered, setEntered] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
+  if (!mounted) return null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return (
+    <main className="w-full text-[#333] relative overflow-x-hidden bg-[#FDFCEE]">
+      {/* ─── FLOATING NAVIGATION ─── */}
+      <div className="fixed top-6 right-6 md:top-8 md:right-10 z-[110] flex flex-row gap-4">
+         <a href="#home" className="group flex items-center justify-center px-6 py-2 bg-[#F9B658] border-[4px] border-white rounded-[20px] shadow-[4px_4px_0px_rgba(201,129,51,0.5)] hover:shadow-[4px_6px_0px_rgba(201,129,51,0.7)] hover:-translate-y-[2px] transition-all duration-300">
+            <span className="font-['Fredoka'] font-bold text-white text-[17px] tracking-widest uppercase drop-shadow-sm">Home</span>
+         </a>
+         <a href="#toc" className="group flex items-center justify-center px-6 py-2 bg-[#89B66B] border-[4px] border-white rounded-[20px] shadow-[4px_4px_0px_rgba(108,133,88,0.5)] hover:shadow-[4px_6px_0px_rgba(108,133,88,0.7)] hover:-translate-y-[2px] transition-all duration-300">
+            <span className="font-['Fredoka'] font-bold text-white text-[17px] tracking-widest uppercase drop-shadow-sm">TOC</span>
+         </a>
+      </div>
+
+      
+      {/* ─── INTERACTIVE INTRO ─── */}
+      <div className={`fixed inset-0 z-[100] bg-[#FDFCEE] flex flex-col items-center justify-center transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${entered ? '-translate-y-full' : 'translate-y-0'}`}>
+         <div className="absolute inset-0 noise-overlay opacity-15 pointer-events-none z-0"></div>
+         
+         <div className="absolute left-[-10%] top-[20%] w-[50%] h-[60%] bg-halftone-large opacity-10 z-0 animate-pulse" style={{clipPath: 'circle(50% at 30% 50%)'}}></div>
+         <div className="absolute right-[-10%] bottom-[10%] w-[40%] h-[50%] bg-halftone-large opacity-10 z-0 animate-pulse" style={{clipPath: 'circle(50% at 70% 50%)'}}></div>
+         
+         <svg width="60" height="60" viewBox="0 0 100 100" className="absolute top-[20%] right-[20%] animate-float drop-shadow-sm rotate-[15deg]">
+            <g stroke="#FCE8AC" strokeWidth="12" strokeLinecap="round">
+              <line x1="50" y1="10" x2="50" y2="90"/>
+              <line x1="15" y1="30" x2="85" y2="70"/>
+              <line x1="15" y1="70" x2="85" y2="30"/>
+            </g>
+         </svg>
+         
+         <div className="relative z-10 flex flex-col items-center">
+            <h1 className="text-[80px] sm:text-[100px] md:text-[120px] mb-8 text-center leading-[1.1] rotate-[-2deg] font-['Fredoka'] font-black text-stroke-white-shadow-orange animate-[fade-in-up_0.8s_ease-out_forwards] cursor-default hover:scale-105 hover:rotate-2 transition-transform duration-500 opacity-0">
+               Welcome to<br/>My Scrapbook
+            </h1>
+            
+            <div className="relative p-6 mt-4 group cursor-pointer animate-[fade-in-up_0.8s_ease-out_0.3s_forwards] opacity-0" onClick={() => setEntered(true)}>
+              <div className="absolute inset-6 bg-[#F3A765] rounded-[2rem] transition-all duration-500 ease-out group-hover:translate-y-3 group-hover:translate-x-3 group-hover:rotate-2"></div>
+              
+              <div className="relative bg-[#89B66B] text-white font-['Fredoka'] font-bold text-3xl md:text-4xl px-12 md:px-16 py-5 md:py-6 rounded-[2rem] border-[6px] border-white transition-all duration-500 ease-out transform group-hover:-translate-y-2 group-hover:-translate-x-2 group-hover:scale-105 group-active:scale-95 group-hover:-rotate-2 flex items-center gap-3">
+                 Open Portfolio
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="#FDEECA" className="animate-spin-slow">
+                   <path d="M12 0 C12 10 22 12 22 12 C22 12 12 14 12 24 C12 14 2 12 2 12 C2 12 12 10 12 0 Z"/>
+                 </svg>
+              </div>
+            </div>
+         </div>
+      </div>
+
+      <div className={`transition-opacity duration-1000 delay-300 ${entered ? 'opacity-100' : 'opacity-0 h-screen overflow-hidden'}`}>
+        
+        {/* ─── HERO SECTION ─── */}
+        <section id="home" className="relative w-full min-h-screen flex flex-col items-center justify-center pt-24 pb-32 z-10 bg-[#FAF4E1] overflow-hidden">
+          
+          <div className="absolute inset-0 noise-overlay opacity-10 pointer-events-none z-0"></div>
+          
+          <div className="absolute bottom-[-5%] left-[-5%] w-[50%] h-[70%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 20% 80%)'}}></div>
+          <div className="absolute top-[-5%] right-[-5%] w-[50%] h-[60%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 80% 20%)'}}></div>
+
+          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg]">
+             
+             {/* Back folder */}
+             <div className={`absolute inset-0 bg-gradient-to-b from-[#F6B578] to-[#F1934B] rounded-[24px] md:rounded-[30px] border-[6px] border-white translate-x-6 md:translate-x-8 -translate-y-6 md:-translate-y-8 group-hover/folder:translate-x-12 group-hover/folder:-translate-y-12 group-hover/folder:rotate-[2deg] transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 ${entered ? 'animate-layer-up delay-100' : ''}`}>
+                 <div className="absolute inset-0 rounded-[20px] overflow-hidden pointer-events-none">
+                     <div className="absolute inset-0 noise-overlay opacity-20"></div>
+                 </div>
+                 
+                 <div className="absolute -top-[45px] left-[-2px] w-[45%] h-[50px] flex z-10">
+                     <div className="w-[80%] bg-[#F6B578] border-[6px] border-white border-b-0 border-r-0 rounded-tl-[24px]"></div>
+                     <div className="flex-1 bg-[#F6B578] border-[6px] border-white border-b-0 border-l-0 origin-bottom-left skew-x-[35deg] rounded-tr-[16px] -ml-[6px]"></div>
+                 </div>
+             </div>
+
+             {/* 
+                Front folder 
+                FIX: Increased padding-top/bottom to py-20 md:py-32.
+                This makes the folder taller, giving horizontal elements MUCH more room to spread vertically.
+             */}
+             <div className={`relative bg-[#FDEECA] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-16 md:px-32 py-20 md:py-32 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
+                
+                <div className="absolute inset-0 rounded-[18px] md:rounded-[24px] overflow-hidden pointer-events-none">
+                   <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '12px 12px' }}></div>
+                   <div className="absolute inset-0 noise-overlay opacity-20"></div>
+                </div>
+
+                {/* Ribbon and Green Tab (2025) */}
+                <div className={`absolute -top-[70px] left-[12%] z-20 flex flex-col items-center drop-shadow-md group/tab cursor-pointer opacity-0 ${entered ? 'animate-layer-up delay-500' : ''}`}>
+                   <div className="absolute top-[40px] w-[50px] md:w-[60px] h-[100px] bg-[#E8704A] -z-10 transition-transform duration-500 group-hover/tab:scale-y-110 origin-top rotate-[5deg]" style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)'}}>
+                      <div className="absolute inset-0 noise-overlay opacity-20"></div>
+                   </div>
+                   <div className="relative w-[120px] md:w-[130px] h-[55px] md:h-[60px] transition-transform duration-500 group-hover/tab:-translate-y-2 flex items-center justify-center">
+                      <svg width="100%" height="100%" viewBox="0 0 130 60" preserveAspectRatio="none" className="absolute inset-0">
+                         <path d="M 12 5 L 118 5 L 130 60 L 0 60 Z" fill="#89B66B" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
+                      </svg>
+                      <span className="relative z-10 font-['Fredoka'] text-white text-3xl font-black mt-1">2026</span>
+                   </div>
+                </div>
+
+                {/* Grouped Text + Name Tag */}
+                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg]`}>
+                   
+                   <h1 className="text-[120px] sm:text-[150px] md:text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
+                      Portfolio
+                   </h1>
+                   
+                   {/* 
+                      FIX: Pushed down aggressively to -bottom-[85px]. 
+                      Now completely detached from the text green body AND clearly below the shadow loops.
+                   */}
+                   <div className="absolute -bottom-[65px] md:-bottom-[85px] right-[5%] z-40">
+                      <div className="relative bg-gradient-to-r from-[#F1934B] to-[#E8704A] text-white font-['Fredoka'] font-bold px-8 md:px-10 py-2 md:py-3 rounded-[12px] shadow-[3px_3px_0px_rgba(0,0,0,0.05)] text-lg md:text-xl border-[4px] border-white transform transition-transform duration-300 hover:scale-110 cursor-pointer">
+                         <div className="absolute inset-0 rounded-[8px] overflow-hidden pointer-events-none">
+                            <div className="absolute inset-0 noise-overlay opacity-20"></div>
+                         </div>
+                         <span className="relative z-10">Huyen Dao</span>
+                      </div>
+                   </div>
+                </div>
+
+                {/* ─── STICKERS (FIX: SPREAD OUT AND SCALED APPROPRIATELY) ─── */}
+                
+                {/* 1. Yellow Asterisk - Pushed out further left */}
+                <div className={`absolute -left-[70px] md:-left-[100px] top-[15%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''}`}>
+                   <div className="animate-float-delayed hover:scale-125 transition-transform duration-500 cursor-pointer">
+                      <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-md">
+                        <g fill="none" stroke="#F9DB82" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round">
+                           <path d="M 50 15 L 50 85" />
+                           <path d="M 20 35 L 80 65" />
+                           <path d="M 20 65 L 80 35" />
+                        </g>
+                      </svg>
+                   </div>
+                </div>
+
+                {/* 2. Orange Cursor Arrow - Pushed down and left */}
+                <div className={`absolute -left-[50px] md:-left-[70px] bottom-[10%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
+                   <div className="animate-float rotate-[-15deg] cursor-pointer hover:rotate-0 transition-transform">
+                      <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
+                        <path d="M 25 15 L 25 80 L 45 60 L 65 90 L 80 80 L 60 50 L 90 50 Z" fill="#F3A765" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
+                      </svg>
+                   </div>
+                </div>
+
+                {/* 3. Clover Stamp - Pushed down to clear Portfolio text */}
+                <div className={`absolute left-[30%] md:left-[35%] -bottom-[80px] md:-bottom-[100px] rotate-[-5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
+                   <div className="relative w-[130px] h-[150px] md:w-[150px] md:h-[170px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
+                      <div className="absolute inset-0 bg-white stamp-mask shadow-[0_10px_20px_rgba(0,0,0,0.1)]"></div>
+                      <div className="absolute inset-[10px] border-[1.5px] border-[#EEE] z-10 pointer-events-none rounded-[4px]"></div>
+
+                      <svg className="absolute -top-3 -left-3 z-50 drop-shadow-sm" width="50" height="50" viewBox="0 0 100 100">
+                         <path d="M50 50 C20 10 0 40 50 50 C80 10 100 40 50 50" fill="none" stroke="#E8704A" strokeWidth="6" strokeLinecap="round"/>
+                         <path d="M50 50 L25 85 M50 50 L75 85" stroke="#E8704A" strokeWidth="6" strokeLinecap="round"/>
+                         <circle cx="50" cy="50" r="5" fill="#E8704A"/>
+                      </svg>
+                         
+                      <svg width="90" height="90" viewBox="0 0 100 100" className="relative z-20 drop-shadow-sm ml-2 mt-2">
+                         <g fill="#89B66B">
+                           <circle cx="35" cy="35" r="16"/>
+                           <circle cx="65" cy="35" r="16"/>
+                           <circle cx="35" cy="65" r="16"/>
+                           <circle cx="65" cy="65" r="16"/>
+                           <rect x="35" y="35" width="30" height="30" />
+                         </g>
+                         <circle cx="40" cy="48" r="4" fill="white"/>
+                         <circle cx="60" cy="48" r="4" fill="white"/>
+                         <path d="M44 56 Q50 62 56 56" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round"/>
+                      </svg>
+                   </div>
+                </div>
+
+                {/* 4. Ai Puffy Star - Far Top Right */}
+                <div className={`absolute -right-[40px] md:-right-[60px] -top-[40px] md:-top-[60px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''}`}>
+                   <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
+                      <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-md">
+                         <polygon points="50,15 61,38 86,41 68,58 74,84 50,70 26,84 32,58 14,41 39,38" fill="#F1934B" stroke="white" strokeWidth="8" strokeLinejoin="round"/>
+                         <text x="50" y="55" fontFamily="'Fredoka', sans-serif" fontSize="34" fill="white" fontWeight="900" textAnchor="middle" dominantBaseline="middle">Ai</text>
+                      </svg>
+                   </div>
+                </div>
+
+                {/* 5. Leaf Blob - Spread to top 15% */}
+                <div className={`absolute -right-[60px] md:-right-[100px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''}`}>
+                   <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
+                      <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
+                         <polygon points="50,10 65,30 90,30 75,50 85,75 50,65 15,75 25,50 10,30 35,30" fill="#B5D799" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
+                         <path d="M 30 70 C 20 45, 45 30, 70 30 C 50 25, 25 50, 30 70 Z" fill="white" stroke="white" strokeWidth="2" strokeLinejoin="round"/>
+                      </svg>
+                   </div>
+                </div>
+
+                {/* 6. Figma Logo - Spread to top 42% */}
+                <div className={`absolute -right-[50px] md:-right-[80px] top-[42%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''}`}>
+                   <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
+                      <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
+                         <rect x="15" y="15" width="70" height="70" rx="16" fill="#CDE7BC" stroke="white" strokeWidth="6"/>
+                         <g transform="translate(50, 50) scale(1.1) translate(-50, -50)">
+                            <circle cx="42" cy="34" r="7" fill="none" stroke="#89B66B" strokeWidth="3"/>
+                            <circle cx="58" cy="34" r="7" fill="none" stroke="#89B66B" strokeWidth="3"/>
+                            <circle cx="42" cy="50" r="7" fill="none" stroke="#89B66B" strokeWidth="3"/>
+                            <circle cx="58" cy="50" r="7" fill="none" stroke="#89B66B" strokeWidth="3"/>
+                            <path d="M 42 66 C 42 56, 50 56, 50 66 C 50 76, 42 76, 42 66 Z" fill="none" stroke="#89B66B" strokeWidth="3"/>
+                         </g>
+                      </svg>
+                   </div>
+                </div>
+
+                {/* 7. Blender Logo - Spread to top 70% */}
+                <div className={`absolute -right-[40px] md:-right-[90px] top-[70%] rotate-[5deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1100' : ''}`}>
+                   <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
+                      <svg width="90" height="90" viewBox="0 0 100 100" className="drop-shadow-md">
+                         <path d="M50,15 C60,15 65,30 75,35 C90,40 95,50 90,65 C85,75 75,85 60,85 C50,85 35,85 25,75 C15,65 15,50 25,35 C35,30 40,15 50,15 Z" fill="#F1934B" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
+                         <circle cx="48" cy="50" r="10" fill="none" stroke="white" strokeWidth="4"/>
+                         <path d="M 48 40 Q 65 25 75 30" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round"/>
+                         <path d="M 38 43 L 28 32" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round"/>
+                      </svg>
+                   </div>
+                </div>
+
+                {/* 8. Ps Sticker - Pushed far bottom right */}
+                <div className={`absolute right-[-5px] md:right-[-25px] -bottom-[40px] md:-bottom-[50px] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''}`}>
+                   <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
+                      <svg width="90" height="90" viewBox="0 0 100 100" className="drop-shadow-md">
+                         <circle cx="50" cy="50" r="40" fill="#89B66B" stroke="white" strokeWidth="6"/>
+                         <text x="50" y="55" fontFamily="'Fredoka', sans-serif" fontSize="36" fill="white" fontWeight="900" textAnchor="middle" dominantBaseline="middle">Ps</text>
+                      </svg>
+                   </div>
+                </div>
+                
+             </div>
+          </div>
+        </section>
+                                                                                        {/* ─── ABOUT ME ─── */}
+        <section className="relative w-full py-24 bg-[#FDFCEE] overflow-hidden">
+           <div className="absolute inset-0 noise-overlay opacity-10 pointer-events-none z-0"></div>
+           <div className="absolute inset-0 bg-halftone-large opacity-10 pointer-events-none z-0"></div>
+
+           <div className="max-w-[1400px] mx-auto px-6 relative z-20 flex flex-col lg:flex-row gap-12 items-stretch justify-center">
+              
+              {/* LEFT COLUMN: GREEN PAPER */}
+              <div className="w-full lg:w-[35%] bg-[#CBE0A3] py-16 pr-8 pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-16">
+                 <div className="absolute inset-0 noise-overlay opacity-20 rounded-[16px] pointer-events-none"></div>
+                 
+                 {/* Education Tab */}
+                 <div className="relative">
+                     <div className="absolute -left-[70px] -top-6 bg-[#537A38] text-white font-['Fredoka'] font-black text-4xl px-8 py-3 rotate-[-2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
+                        Education
+                     </div>
+                     <div className="relative z-10 text-[#3A5723] pt-16">
+                        <div className="mb-6">
+                           <p className="font-['Quicksand'] font-bold text-lg mb-1 opacity-80">Sep 2024 – Apr 2028</p>
+                           <h4 className="font-['Fredoka'] font-black text-2xl mb-1 text-[#466B29] leading-tight" style={{ textShadow: '1px 1px 0px white' }}>Foreign Trade University</h4>
+                           <p className="font-['Quicksand'] font-bold text-md">Bachelor of International Business</p>
+                        </div>
+                        <div>
+                           <p className="font-['Quicksand'] font-bold text-lg mb-1 opacity-80">Sep 2021 – Jun 2024</p>
+                           <h4 className="font-['Fredoka'] font-black text-2xl mb-1 text-[#466B29] leading-tight" style={{ textShadow: '1px 1px 0px white' }}>Tran Phu Gifted High School</h4>
+                           <p className="font-['Quicksand'] font-bold text-md">Physics Honors Class</p>
+                        </div>
+                     </div>
+                 </div>
+
+                 {/* Achievement Tab */}
+                 <div className="relative">
+                     <div className="absolute -left-[70px] -top-6 bg-[#7AA65B] text-white font-['Fredoka'] font-black text-4xl px-8 py-3 rotate-[1deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #466B29, 2px -2px 0 #466B29, -2px 2px 0 #466B29, 2px 2px 0 #466B29, 4px 4px 0px rgba(0,0,0,0.2)' }}>
+                        Achievement
+                     </div>
+                     <div className="relative z-10 text-[#3A5723] font-['Quicksand'] font-bold text-md space-y-6 pt-16">
+                        <div>
+                           <h4 className="font-['Fredoka'] font-black text-xl text-[#466B29] leading-tight" style={{ textShadow: '1px 1px 0px white' }}>Google Digital Marketing Cert</h4>
+                           <p className="opacity-80">Oct 2023</p>
+                        </div>
+                        <div>
+                           <h4 className="font-['Fredoka'] font-black text-xl text-[#466B29] leading-tight" style={{ textShadow: '1px 1px 0px white' }}>City-Level Physics Excellence</h4>
+                           <p className="opacity-80">Second Prize (Sep 2022)</p>
+                        </div>
+                        <div>
+                           <h4 className="font-['Fredoka'] font-black text-xl text-[#466B29] leading-tight" style={{ textShadow: '1px 1px 0px white' }}>Hai Phong Youth Innovation</h4>
+                           <p className="opacity-80">Consolation Prize (Jul 2021)</p>
+                        </div>
+                     </div>
+                 </div>
+
+                 {/* Skills Tab */}
+                 <div className="relative">
+                     <div className="absolute -left-[70px] -top-6 bg-[#6CA35C] text-white font-['Fredoka'] font-black text-4xl px-8 py-3 rotate-[-1deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
+                        Skills
+                     </div>
+                     <div className="relative z-10 text-[#3A5723] pt-16">
+                        <div className="mb-4">
+                           <p className="font-['Fredoka'] text-[#466B29] text-xl mb-2 font-black">Hard Skills</p>
+                           <ul className="list-disc ml-6 font-['Quicksand'] font-bold text-md space-y-2 opacity-90">
+                              <li>Product & UI/UX Design</li>
+                              <li>Traditional & Digital Illustration</li>
+                              <li>Content Creation & Public Relations</li>
+                              
+                           </ul>
+                        </div>
+                        <div>
+                           <p className="font-['Fredoka'] text-[#466B29] text-xl mb-2 font-black">Soft Skills</p>
+                           <ul className="list-disc ml-6 font-['Quicksand'] font-bold text-md space-y-2 opacity-90">
+                              <li>Planning & Time Management</li>
+                              <li>Communication & Presenting Ideas</li>
+                              <li>Working Independently & in Groups</li>
+                           </ul>
+                        </div>
+                     </div>
+                 </div>
+
+                 {/* Softwares Tab */}
+                 <div className="relative">
+                     <div className="absolute -left-[70px] -top-6 bg-[#487334] text-white font-['Fredoka'] font-black text-4xl px-8 py-3 rotate-[2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #2D4A20, 2px -2px 0 #2D4A20, -2px 2px 0 #2D4A20, 2px 2px 0 #2D4A20, 4px 4px 0px rgba(0,0,0,0.2)' }}>
+                        Softwares
+                     </div>
+                     <div className="relative z-10 text-[#3A5723] pt-16">
+                        
+                        {/* Software Stickers replacing plain text */}
+                        <div className="flex flex-wrap gap-4 mt-2">
+                            {/* Figma Sticker */}
+                            <div className="bg-[#2C2D33] text-white font-['Fredoka'] font-black text-lg px-4 py-2 rounded-[16px] border-[4px] border-white shadow-[4px_4px_0px_rgba(0,0,0,0.15)] rotate-[-3deg] flex items-center gap-2">
+                                <svg width="18" height="26" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 28.5C13.7533 28.5 9.5 24.2467 9.5 19C9.5 13.7533 13.7533 9.5 19 9.5L28.5 9.5V28.5L19 28.5Z" fill="#F24E1E"/>
+                                    <path d="M19 47.5C13.7533 47.5 9.5 43.2467 9.5 38C9.5 32.7533 13.7533 28.5 19 28.5L28.5 28.5V47.5L19 47.5Z" fill="#A259FF"/>
+                                    <path d="M19 28.5L28.5 28.5V9.5L19 9.5C13.7533 9.5 9.5 13.7533 9.5 19C9.5 24.2467 13.7533 28.5 19 28.5Z" fill="#F24E1E"/>
+                                    <path d="M28.5 28.5C33.7467 28.5 38 24.2467 38 19C38 13.7533 33.7467 9.5 28.5 9.5L19 9.5V28.5L28.5 28.5Z" fill="#FF7262"/>
+                                    <path d="M19 47.5L28.5 47.5V28.5L19 28.5C13.7533 28.5 9.5 32.7533 9.5 38C9.5 43.2467 13.7533 47.5 19 47.5Z" fill="#A259FF"/>
+                                    <path d="M28.5 47.5C33.7467 47.5 38 43.2467 38 38C38 32.7533 33.7467 28.5 28.5 28.5L19 28.5V47.5L28.5 47.5Z" fill="#1ABCFE"/>
+                                    <path d="M19 57C13.7533 57 9.5 52.7467 9.5 47.5C9.5 42.2533 13.7533 38 19 38L28.5 38L28.5 47.5C28.5 52.7467 24.2467 57 19 57Z" fill="#0ACF83"/>
+                                </svg>
+                                Figma
+                            </div>
+                            
+                            {/* Photoshop Sticker */}
+                            <div className="bg-[#31A8FF] text-[#001E36] font-['Fredoka'] font-black text-2xl px-3 py-1 rounded-[12px] border-[4px] border-white shadow-[4px_4px_0px_rgba(0,0,0,0.15)] rotate-[4deg]">
+                                Ps
+                            </div>
+                            
+                            {/* Illustrator Sticker */}
+                            <div className="bg-[#FF9A00] text-[#330000] font-['Fredoka'] font-black text-2xl px-3 py-1 rounded-[12px] border-[4px] border-white shadow-[4px_4px_0px_rgba(0,0,0,0.15)] rotate-[-2deg]">
+                                Ai
+                            </div>
+
+                            {/* Canva Sticker */}
+                            <div className="bg-gradient-to-br from-[#00C4CC] to-[#7D2AE8] text-white font-['Fredoka'] font-black text-lg px-4 py-2 rounded-[16px] border-[4px] border-white shadow-[4px_4px_0px_rgba(0,0,0,0.15)] rotate-[3deg]">
+                                Canva
+                            </div>
+                            
+                            {/* CapCut Sticker */}
+                            <div className="bg-black text-white font-['Fredoka'] font-black text-lg px-4 py-2 rounded-[16px] border-[4px] border-white shadow-[4px_4px_0px_rgba(0,0,0,0.15)] rotate-[-4deg]">
+                                CapCut
+                            </div>
+
+                            {/* MS Office Sticker */}
+                            <div className="bg-[#0072C6] text-white font-['Fredoka'] font-black text-lg px-4 py-2 rounded-[16px] border-[4px] border-white shadow-[4px_4px_0px_rgba(0,0,0,0.15)] rotate-[2deg]">
+                                MS Office
+                            </div>
+                        </div>
+
+                     </div>
+                 </div>
+
+              </div>
+
+              {/* RIGHT COLUMN: INFO CARD & EXPERIENCE */}
+              <div className="w-full lg:w-[65%] flex flex-col gap-12">
+                 
+                 {/* TOP CARD: INFO */}
+                 <div className="bg-[#FDF9E7] p-10 md:p-12 rounded-[40px] border-[8px] border-white shadow-[12px_12px_0px_rgba(209,205,188,0.5)] relative rotate-[1deg] flex flex-col xl:flex-row gap-12 items-center xl:items-start">
+                    <div className="absolute inset-0 noise-overlay opacity-10 rounded-[32px] pointer-events-none"></div>
+                    
+                    {/* Polaroid Avatar Frame */}
+                    <div className="relative shrink-0 rotate-[-3deg] z-20">
+                       <div className="bg-white p-4 pb-12 rounded-[16px] shadow-[8px_8px_0px_rgba(0,0,0,0.1)] border-[4px] border-white/50 w-[240px]">
+                           <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[8px]">
+                               <img src="/assets/huyen-dao-avatar-2.jpg" className="absolute max-w-none" style={{ width: '270%', height: 'auto', left: '-52%', top: '-75%' }} alt="Avatar" />
+                           </div>
+                       </div>
+                       <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-[100px] h-[35px] bg-white/60 backdrop-blur-md border border-white/80 rotate-[4deg] shadow-sm z-30 rounded-sm"></div>
+                    </div>
+
+                    {/* Info Text */}
+                    <div className="relative z-10 flex-1 w-full pt-2">
+                       <h2 className="font-['Fredoka'] font-black text-[42px] md:text-[52px] text-[#86573C] mb-6 leading-[1.1]" style={{textShadow: '-3px -3px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF, 5px 5px 0px rgba(0,0,0,0.1)'}}>
+                          Dao Hoang Khanh Huyen
+                       </h2>
+                       
+                       <div className="font-['Quicksand'] font-bold text-[#6D452F] text-lg space-y-3 mb-6 border-b-[3px] border-dashed border-[#C9C5B4] pb-6">
+                          <div className="flex flex-wrap gap-x-8 gap-y-3">
+                             <p><span className="opacity-70">Gender:</span> Female</p>
+                             <p><span className="opacity-70">Date of birth:</span> 2006</p>
+                          </div>
+                          <p><span className="opacity-70">Nationality:</span> Vietnamese</p>
+                          <p><span className="opacity-70">Role:</span> Product Design Intern</p>
+                          
+                          <div className="w-full h-[2px] bg-[#86573C]/20 my-4"></div>
+                          
+                          <p><span className="opacity-70">Contact:</span> 0942 451 288</p>
+                          <p><span className="opacity-70">Email:</span> daohuyen2655@gmail.com</p>
+                       </div>
+                       
+                       <p className="font-['Quicksand'] text-[#553523] font-semibold text-lg leading-relaxed mb-8">
+                          A product designer with a passion for user experience, creative problem-solving, and visual communication. Eager to build hands-on experience in product strategy and engaging UI/UX design.
+                       </p>
+                       
+                       <div className="flex justify-start">
+                           <a href="https://www.linkedin.com/in/huyen-dao-584a53297/" target="_blank" rel="noopener noreferrer" className="font-['Fredoka'] font-black text-2xl bg-[#EBA355] text-white px-8 py-3 rounded-full border-[6px] border-white shadow-[6px_6px_0px_#C98133] hover:translate-y-1 hover:shadow-[3px_3px_0px_#C98133] transition-all rotate-[-2deg]" style={{textShadow: '1px 1px 0px rgba(0,0,0,0.2)'}}>
+                               My LinkedIn ➔
+                           </a>
+                       </div>
+                    </div>
+                 </div>
+
+                 {/* BOTTOM CARD: EXPERIENCE (Orange Paper with Notebook Edge) */}
+                 <div className="bg-[#F5D586] p-10 md:p-14 rounded-b-[24px] rounded-t-none border-b-[8px] border-l-[8px] border-r-[8px] border-white shadow-[12px_12px_0px_rgba(209,174,90,0.5)] relative rotate-[-1deg] w-full flex-1 min-h-[300px] mt-6">
+                    <div className="absolute inset-0 noise-overlay opacity-15 pointer-events-none"></div>
+                    
+                    <div className="absolute -top-[24px] left-[-8px] w-[calc(100%+16px)] h-[24px] overflow-hidden drop-shadow-[0_-4px_0_white] z-10">
+                       <svg width="100%" height="24" preserveAspectRatio="none">
+                          <defs>
+                             <pattern id="teeth-exp" width="40" height="24" patternUnits="userSpaceOnUse">
+                                <path d="M0,24 L0,6 C0,2 6,2 12,2 L28,2 C34,2 40,2 40,6 L40,24 Z" fill="#F5D586"/>
+                             </pattern>
+                          </defs>
+                          <rect width="100%" height="24" fill="url(#teeth-exp)"/>
+                       </svg>
+                    </div>
+
+                    <div className="absolute -top-12 -right-8 md:-right-12 z-30">
+                       <div className="bg-[#FFF] text-[#86573C] font-['Fredoka'] font-black text-4xl md:text-5xl px-12 py-4 shadow-[8px_8px_0px_rgba(209,174,90,0.8)] rotate-[3deg] border-[8px] border-white whitespace-nowrap" style={{textShadow: '2px 2px 0px rgba(0,0,0,0.1)'}}>
+                          Experience
+                       </div>
+                    </div>
+
+                    <div className="relative z-20 space-y-10 mt-16 text-[#6D452F]">
+                       
+                       {/* Exp 1: EveryLab.ai */}
+                       <div className="flex flex-col font-['Quicksand'] border-b-4 border-dashed border-[#DEBA64] pb-8">
+                          <div className="flex flex-col md:flex-row justify-between items-start gap-2">
+                             <div className="flex-1">
+                                <h4 className="font-['Fredoka'] font-black text-3xl md:text-4xl text-[#D8683E] mb-2 leading-tight" style={{textShadow: '-2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, 4px 4px 0px rgba(0,0,0,0.1)'}}>EveryLab.ai</h4>
+                                <p className="font-bold text-xl opacity-90 mb-1">Product Design Intern / Content Creator</p>
+                             </div>
+                             <span className="font-black text-xl shrink-0 text-[#86573C] opacity-80 md:text-right pt-2">Jan 2026 - Aug 2026</span>
+                          </div>
+                       </div>
+
+                       {/* Exp 2: CC FTU */}
+                       <div className="flex flex-col font-['Quicksand'] border-b-4 border-dashed border-[#DEBA64] pb-8">
+                          <div className="flex flex-col md:flex-row justify-between items-start gap-2">
+                             <div className="flex-1">
+                                <h4 className="font-['Fredoka'] font-black text-3xl md:text-4xl text-[#D8683E] mb-2 leading-tight" style={{textShadow: '-2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, 4px 4px 0px rgba(0,0,0,0.1)'}}>CC FTU</h4>
+                                <p className="font-bold text-xl opacity-90 mb-1">Head of Public Relations</p>
+                             </div>
+                             <span className="font-black text-xl shrink-0 text-[#86573C] opacity-80 md:text-right pt-2">Oct 2024 - Jul 2026</span>
+                          </div>
+                       </div>
+
+                       {/* Exp 3: Paintaso Club */}
+                       <div className="flex flex-col font-['Quicksand'] border-b-4 border-dashed border-[#DEBA64] pb-8">
+                          <div className="flex flex-col md:flex-row justify-between items-start gap-2">
+                             <div className="flex-1">
+                                <h4 className="font-['Fredoka'] font-black text-3xl md:text-4xl text-[#D8683E] mb-2 leading-tight" style={{textShadow: '-2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, 4px 4px 0px rgba(0,0,0,0.1)'}}>Paintaso Club</h4>
+                                <p className="font-bold text-xl opacity-90 mb-1">Co - Organizer</p>
+                             </div>
+                             <span className="font-black text-xl shrink-0 text-[#86573C] opacity-80 md:text-right pt-2">2023 - 2024</span>
+                          </div>
+                       </div>
+
+                       {/* Exp 4: Bang Bang Magazine */}
+                       <div className="flex flex-col font-['Quicksand'] border-b-4 border-dashed border-[#DEBA64] pb-8">
+                          <div className="flex flex-col md:flex-row justify-between items-start gap-2">
+                             <div className="flex-1">
+                                <h4 className="font-['Fredoka'] font-black text-3xl md:text-4xl text-[#D8683E] mb-2 leading-tight" style={{textShadow: '-2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, 4px 4px 0px rgba(0,0,0,0.1)'}}>Bang Bang Magazine</h4>
+                                <p className="font-bold text-xl opacity-90 mb-1">Head of Public Relations</p>
+                             </div>
+                             <span className="font-black text-xl shrink-0 text-[#86573C] opacity-80 md:text-right pt-2">2024</span>
+                          </div>
+                       </div>
+
+                       {/* Exp 5: GYPP Vietnam & Others */}
+                       <div className="flex flex-col font-['Quicksand'] pb-2">
+                          <div className="flex flex-col md:flex-row justify-between items-start gap-2">
+                             <div className="flex-1">
+                                <h4 className="font-['Fredoka'] font-black text-3xl md:text-4xl text-[#D8683E] mb-2 leading-tight" style={{textShadow: '-2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, 4px 4px 0px rgba(0,0,0,0.1)'}}>Other Activities</h4>
+                                <ul className="list-disc ml-5 font-bold text-lg opacity-90 space-y-1">
+                                   <li><span className="opacity-80">GYPP Vietnam -</span> Media Ambassador</li>
+                                   <li><span className="opacity-80">The Fallen Project -</span> Member</li>
+                                   <li><span className="opacity-80">LOGIA Debate Club -</span> Member</li>
+                                   <li><span className="opacity-80">The Kori Project -</span> Member</li>
+                                </ul>
+                             </div>
+                             <span className="font-black text-xl shrink-0 text-[#86573C] opacity-80 md:text-right pt-2">2023 - 2024</span>
+                          </div>
+                       </div>
+
+                    </div>
+                 </div>
+
+              </div>
+           </div>
+        </section>
+{/* ─── TABLE OF CONTENTS ─── */}
+        
+        {/* SEAM MARQUEE (Between About Me and TOC) */}
+        <div className="relative w-full overflow-hidden rotate-[-1.5deg] bg-[#F9B658] border-y-[4px] border-[#333] z-40 -mt-8 -mb-4 shadow-sm flex flex-col justify-center">
+            <div className="animate-marquee-infinite flex whitespace-nowrap font-['Fredoka'] font-black text-2xl md:text-3xl text-[#222] py-2.5 w-max">
+                <div className="shrink-0 flex items-center gap-8 px-4">
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                </div>
+                <div className="shrink-0 flex items-center gap-8 px-4">
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="toc" className="relative w-full pb-32 bg-[#F6F4EB] overflow-hidden pt-16 md:pt-20">
+           {/* Background Textures */}
+           <div className="absolute inset-0 noise-overlay opacity-[0.15] pointer-events-none z-0"></div>
+           <div className="absolute inset-0 bg-halftone-large opacity-[0.03] pointer-events-none z-0"></div>
+           
+           <div className="max-w-[1200px] mx-auto px-6 relative z-20">
+              
+              <div className="flex flex-col items-center mb-24">
+                 <div className="relative group">
+                    <h2 className="text-[70px] md:text-[100px] font-['Fredoka'] font-black text-[#6C8558] rotate-[-2deg] transition-transform duration-500 group-hover:scale-105" style={{ textShadow: '-3px -3px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF, 5px 5px 0px rgba(108,133,88,0.3)' }}>
+                       Table of Contents
+                    </h2>
+                 </div>
+              </div>
+
+              <div className="flex flex-col items-center gap-14">
+                 {/* Top Row: 4 Cards */}
+                 <div className="flex flex-wrap justify-center gap-8 w-full">
+                    {[
+                       { id: "01", title: "Chinese Debate '25", link: "chinese-debate-25", color: "group-hover:text-[#E27E5D]", border: "group-hover:border-[#E27E5D]" },
+                       { id: "02", title: "Chinese Debate '26", link: "chinese-debate-26", color: "group-hover:text-[#5C8760]", border: "group-hover:border-[#5C8760]" },
+                       { id: "03", title: "Gen 20 Recruit", link: "gen-20-recruit", color: "group-hover:text-[#D49D42]", border: "group-hover:border-[#D49D42]" },
+                       { id: "04", title: "19th Anniv", link: "19th-anniversary", color: "group-hover:text-[#7B628A]", border: "group-hover:border-[#7B628A]" }
+                    ].map((item, i) => (
+                       <a href={`#${item.link}`} key={item.id} className={`relative group cursor-pointer block transition-all duration-300 hover:-translate-y-4 hover:scale-105 z-10 hover:z-20`} style={{ transform: `rotate(${i%2==0 ? 2 : -2}deg)` }}>
+                          <div className={`w-[240px] md:w-[260px] aspect-square bg-[#FDFBF7] rounded-[24px] border-[6px] border-white shadow-[8px_8px_0px_rgba(92,74,61,0.15)] group-hover:shadow-[14px_14px_0px_rgba(92,74,61,0.25)] ${item.border} p-8 flex flex-col justify-between transition-all duration-300`}>
+                             <div className="absolute inset-0 noise-overlay opacity-10 rounded-[18px]"></div>
+                             <span className={`font-['Fredoka'] text-6xl font-black text-[#E8E2D5] transition-colors ${item.color}`}>{item.id}</span>
+                             <h3 className={`font-['Fredoka'] text-3xl font-bold text-[#5C4A3D] leading-tight group-hover:text-[#333]`}>
+                                {item.title}
+                             </h3>
+                          </div>
+                          
+                          {/* Dynamic Tapes for Top Row */}
+                          {/* Standard White Tape */}
+                          {i === 0 && <div className="absolute top-[-15px] left-1/2 -translate-x-1/2 w-[60px] h-[25px] bg-white/70 backdrop-blur-md border border-white/80 rotate-[4deg] shadow-sm rounded-sm z-10 transition-transform duration-300 group-hover:rotate-[-4deg]"></div>}
+                          
+                          {/* Star Sticker (Matches Software tab style) */}
+                          {i === 1 && <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 w-[42px] h-[42px] bg-[#F9B658] border-[4px] border-white shadow-[4px_4px_0px_rgba(201,129,51,0.5)] rounded-full flex items-center justify-center font-black text-white text-xl rotate-[-10deg] z-10 transition-transform duration-300 group-hover:rotate-[10deg]">★</div>}
+                          
+                          {/* Round Pink Sticker */}
+                          {i === 2 && <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 w-[35px] h-[35px] bg-[#F66D8E] border-[4px] border-white shadow-[4px_4px_0px_rgba(214,78,113,0.5)] rounded-full flex items-center justify-center font-black text-white text-lg rotate-[8deg] z-10 transition-transform duration-300 group-hover:rotate-[-5deg]">♥</div>}
+                          
+                          {/* Pink Washi Tape */}
+                          {i === 3 && <div className="absolute top-[-15px] left-1/2 -translate-x-1/2 w-[55px] h-[20px] bg-[#FFD1DC]/90 backdrop-blur-md border border-white rotate-[-5deg] shadow-sm rounded-sm z-10 transition-transform duration-300 group-hover:rotate-[5deg]"></div>}
+
+                       </a>
+                    ))}
+                 </div>
+                 
+                 {/* Bottom Row: 3 Cards */}
+                 <div className="flex flex-wrap justify-center gap-8 w-full">
+                    {[
+                       { id: "05", title: "Talkshow Live", link: "talkshow-live", color: "group-hover:text-[#B65A5A]", border: "group-hover:border-[#B65A5A]" },
+                       { id: "06", title: "Paintaso Ws", link: "paintaso-workshop", color: "group-hover:text-[#56799C]", border: "group-hover:border-[#56799C]" },
+                       { id: "07", title: "Yapsu AI", link: "yapsu-ai", color: "group-hover:text-[#6A9A8B]", border: "group-hover:border-[#6A9A8B]" }
+                    ].map((item, i) => (
+                       <a href={`#${item.link}`} key={item.id} className={`relative group cursor-pointer block transition-all duration-300 hover:-translate-y-4 hover:scale-105 z-10 hover:z-20`} style={{ transform: `rotate(${i%2==0 ? -3 : 3}deg)` }}>
+                          <div className={`w-[240px] md:w-[260px] aspect-square bg-[#FDFBF7] rounded-[24px] border-[6px] border-white shadow-[8px_8px_0px_rgba(92,74,61,0.15)] group-hover:shadow-[14px_14px_0px_rgba(92,74,61,0.25)] ${item.border} p-8 flex flex-col justify-between transition-all duration-300`}>
+                             <div className="absolute inset-0 noise-overlay opacity-10 rounded-[18px]"></div>
+                             <span className={`font-['Fredoka'] text-6xl font-black text-[#E8E2D5] transition-colors ${item.color}`}>{item.id}</span>
+                             <h3 className={`font-['Fredoka'] text-3xl font-bold text-[#5C4A3D] leading-tight group-hover:text-[#333]`}>
+                                {item.title}
+                             </h3>
+                          </div>
+
+                          {/* Dynamic Tapes for Bottom Row */}
+                          {/* Green Clover Sticker */}
+                          {i === 0 && <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 w-[45px] h-[35px] bg-[#6CA35C] border-[4px] border-white shadow-[4px_4px_0px_rgba(77,122,64,0.5)] rounded-[12px] flex items-center justify-center font-black text-white text-xl rotate-[10deg] z-10 transition-transform duration-300 group-hover:rotate-[-5deg]">♣</div>}
+                          
+                          {/* Yellow Flower Sticker */}
+                          {i === 1 && <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 w-[42px] h-[42px] bg-[#F3A765] border-[4px] border-white shadow-[4px_4px_0px_rgba(209,134,69,0.5)] rounded-full flex items-center justify-center font-black text-white text-xl rotate-[-8deg] z-10 transition-transform duration-300 group-hover:rotate-[8deg]">✿</div>}
+                          
+                          {/* Blue Washi Tape */}
+                          {i === 2 && <div className="absolute top-[-15px] left-1/2 -translate-x-1/2 w-[50px] h-[25px] bg-[#A1C6EA]/90 backdrop-blur-md border border-white rotate-[6deg] shadow-sm rounded-sm z-10 transition-transform duration-300 group-hover:rotate-[-6deg]"></div>}
+
+                       </a>
+                    ))}
+                 </div>
+              </div>
+           </div>
+        </section>
+        
