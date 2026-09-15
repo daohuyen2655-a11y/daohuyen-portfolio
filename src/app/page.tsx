@@ -177,7 +177,7 @@ export default function Page() {
                 </div>
 
                 {/* Grouped Text + Name Tag */}
-                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg] -translate-y-6 md:-translate-y-8`}>
+                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg] -translate-y-3 md:-translate-y-4`}>
                    
                    <h1 className="text-[60px] sm:text-[150px] md:text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
                       Portfolio
