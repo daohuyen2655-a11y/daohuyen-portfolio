@@ -179,8 +179,8 @@ export default function Page() {
                 {/* Grouped Text + Name Tag */}
                 <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg]`}>
                    
-                   <h1 className="text-[120px] sm:text-[150px] md:text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
-                      Portfolio
+                   <h1 className="text-[60px] sm:text-[100px] md:text-[150px] lg:text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
+                      PORTFOLIO
                    </h1>
                    
                    {/* 
@@ -1376,7 +1376,7 @@ export default function Page() {
                   </p>
               </div>
 
-              <div className="relative w-full max-w-[1100px] h-[650px] md:h-[800px] mx-auto mt-4 perspective-[1200px]">
+              <div className="relative w-full max-w-[1100px] h-[580px] sm:h-[650px] md:h-[800px] mx-auto mt-4 perspective-[1200px]">
                   {[
     { title: "MÁC 1", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/1.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/2.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/3.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/4.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/5.jpg"] },
     { title: "MÁC 2", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%201%20LOGO%20MỚI.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%202.jpg"] },
@@ -1398,23 +1398,23 @@ export default function Page() {
                       return (
                           <div 
                               key={idx}
-                              className="absolute inset-0 bg-[#FDFCF9] rounded-[24px] border border-[#EBE6DD] p-8 md:p-14 transition-all duration-[900ms] ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden flex flex-col shadow-[0_20px_60px_rgba(90,80,70,0.08)]"
+                              className="absolute inset-0 bg-[#FDFCF9] rounded-[24px] border border-[#EBE6DD] p-6 sm:p-8 md:p-14 transition-all duration-[900ms] ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden flex flex-col shadow-[0_20px_60px_rgba(90,80,70,0.08)]"
                               style={{ transform: `translate(${translateX}, ${translateY}) rotate(${rotate}) scale(${scale})`, opacity: opacity, zIndex: zIndex, pointerEvents: pointerEvents as any }}
                           >
-                              <div className="w-full flex justify-between items-center mb-8 border-b border-[#EBE6DD] pb-6 shrink-0">
-                                  <h3 className="font-serif italic text-3xl md:text-4xl text-[#2C2822] tracking-widest">
+                              <div className="w-full flex justify-between items-center mb-6 sm:mb-8 border-b border-[#EBE6DD] pb-4 sm:pb-6 shrink-0">
+                                  <h3 className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-[#2C2822] tracking-widest">
                                       {page.title}
                                   </h3>
-                                  <button onClick={() => setActiveZodiacPage(prev => (prev + 1) % 5)} className="group flex items-center gap-2 font-sans font-light tracking-widest text-[#8C8377] hover:text-[#2C2822] transition-colors cursor-pointer text-xs md:text-sm px-4 py-2 uppercase">
+                                  <button onClick={() => setActiveZodiacPage(prev => (prev + 1) % 5)} className="group flex items-center gap-2 font-sans font-light tracking-widest text-[#8C8377] hover:text-[#2C2822] transition-colors cursor-pointer text-[10px] sm:text-xs md:text-sm px-2 sm:px-4 py-2 uppercase">
                                       NEXT <span className="group-hover:translate-x-1 transition-transform">➔</span>
                                   </button>
                               </div>
                               
                               {/* PRECISE USER LAYOUT */}
                               <div className="w-full">
-                                  <div style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'auto', gap: '24px', paddingBottom: '16px', scrollbarWidth: 'none', msOverflowStyle: 'none' } as any} className="zodiac-scroll-container">
+                                  <div style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: '16px', scrollbarWidth: 'none', msOverflowStyle: 'none' } as any} className="zodiac-scroll-container gap-4 sm:gap-6">
                                       {page.images.map((img, i) => (
-                                          <div key={i} style={{ flexShrink: 0, borderRadius: '12px', overflow: 'hidden', border: '2px solid #F2EFEA', background: 'white', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }} className="h-[450px] md:h-[580px] hover:scale-[1.02] transition-transform duration-300">
+                                          <div key={i} style={{ flexShrink: 0, borderRadius: '12px', overflow: 'hidden', border: '2px solid #F2EFEA', background: 'white', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }} className="h-[380px] sm:h-[450px] md:h-[580px] hover:scale-[1.02] transition-transform duration-300">
                                               <img src={img} alt="Zodiac Collection" style={{ height: '100%', width: 'auto', display: 'block' }}  />
                                           </div>
                                       ))}
