@@ -140,10 +140,10 @@ export default function Page() {
           <div className="absolute bottom-[-5%] left-[-5%] w-[50%] h-[70%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 20% 80%)'}}></div>
           <div className="absolute top-[-5%] right-[-5%] w-[50%] h-[60%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 80% 20%)'}}></div>
 
-          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg] scale-[0.75] md:scale-100 origin-center">
+          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg] scale-[0.45] md:scale-100 origin-center">
              
              {/* Back folder */}
-             <div className={`absolute inset-0 bg-gradient-to-b from-[#F6B578] to-[#F1934B] rounded-[24px] md:rounded-[30px] border-[6px] border-white translate-x-6 md:translate-x-8 -translate-y-6 md:-translate-y-8 group-hover/folder:translate-x-12 group-hover/folder:-translate-y-12 group-hover/folder:rotate-[2deg] transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 ${entered ? 'animate-layer-up delay-100' : ''}`}>
+             <div className={`absolute inset-0 bg-gradient-to-b from-[#F6B578] to-[#F1934B] rounded-[30px] border-[6px] border-white translate-x-8 -translate-y-8 group-hover/folder:translate-x-12 group-hover/folder:-translate-y-12 group-hover/folder:rotate-[2deg] transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 ${entered ? 'animate-layer-up delay-100' : ''}`}>
                  <div className="absolute inset-0 rounded-[20px] overflow-hidden pointer-events-none">
                      </div>
                  
@@ -158,28 +158,28 @@ export default function Page() {
                 FIX: Increased padding-top/bottom to py-20 md:py-32.
                 This makes the folder taller, giving horizontal elements MUCH more room to spread vertically.
              */}
-             <div className={`relative bg-[#FFF0CA] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-16 md:px-32 py-20 md:py-32 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
+             <div className={`relative bg-[#FFF0CA] rounded-[30px] border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-32 py-32 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
                 
-                <div className="absolute inset-0 rounded-[18px] md:rounded-[24px] overflow-hidden pointer-events-none">
+                <div className="absolute inset-0 rounded-[24px] overflow-hidden pointer-events-none">
                    <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '12px 12px' }}></div>
                    </div>
 
                 {/* Ribbon and Green Tab (2025) */}
                 <div className={`absolute -top-[70px] left-[12%] z-20 flex flex-col items-center drop-shadow-md group/tab cursor-pointer opacity-0 ${entered ? 'animate-layer-up delay-500' : ''}`}>
-                   <div className="absolute top-[40px] w-[34px] md:w-[60px] h-[100px] bg-[#E8704A] -z-10 transition-transform duration-500 group-hover/tab:scale-y-110 origin-top rotate-[5deg]" style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)'}}>
+                   <div className="absolute top-[40px] w-[60px] h-[100px] bg-[#E8704A] -z-10 transition-transform duration-500 group-hover/tab:scale-y-110 origin-top rotate-[5deg]" style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)'}}>
                       </div>
-                   <div className="relative w-[80px] md:w-[130px] h-[38px] md:h-[60px] transition-transform duration-500 group-hover/tab:-translate-y-2 flex items-center justify-center">
+                   <div className="relative w-[130px] h-[60px] transition-transform duration-500 group-hover/tab:-translate-y-2 flex items-center justify-center">
                       <svg width="100%" height="100%" viewBox="0 0 130 60" preserveAspectRatio="none" className="absolute inset-0">
                          <path d="M 12 5 L 118 5 L 130 60 L 0 60 Z" fill="#89B66B" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
                       </svg>
-                      <span className="relative z-10 font-['Fredoka'] text-white text-xl md:text-3xl font-black mt-1">2026</span>
+                      <span className="relative z-10 font-['Fredoka'] text-white text-3xl font-black mt-1">2026</span>
                    </div>
                 </div>
 
                 {/* Grouped Text + Name Tag */}
-                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg] -translate-y-8 md:-translate-y-4`}>
+                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg] -translate-y-4`}>
                    
-                   <h1 className="text-[60px] sm:text-[150px] md:text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
+                   <h1 className="text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
                       Portfolio
                    </h1>
                    
@@ -187,8 +187,8 @@ export default function Page() {
                       FIX: Pushed down aggressively to -bottom-[85px]. 
                       Now completely detached from the text green body AND clearly below the shadow loops.
                    */}
-                   <div className="absolute -bottom-[65px] md:-bottom-[85px] right-[5%] z-40">
-                      <div className="relative bg-gradient-to-r from-[#F1934B] to-[#E8704A] text-white font-['Fredoka'] font-bold px-8 md:px-10 py-2 md:py-3 rounded-[12px] shadow-[3px_3px_0px_rgba(0,0,0,0.05)] text-lg md:text-xl border-[4px] border-white transform transition-transform duration-300 hover:scale-110 cursor-pointer">
+                   <div className="absolute -bottom-[85px] right-[5%] z-40">
+                      <div className="relative bg-gradient-to-r from-[#F1934B] to-[#E8704A] text-white font-['Fredoka'] font-bold px-10 py-3 rounded-[12px] shadow-[3px_3px_0px_rgba(0,0,0,0.05)] text-xl border-[4px] border-white transform transition-transform duration-300 hover:scale-110 cursor-pointer">
                          <div className="absolute inset-0 rounded-[8px] overflow-hidden pointer-events-none">
                             </div>
                          <span className="relative z-10">Huyen Dao</span>
@@ -199,7 +199,7 @@ export default function Page() {
                 {/* ─── STICKERS (FIX: SPREAD OUT AND SCALED APPROPRIATELY) ─── */}
                 
                 {/* 1. Yellow Asterisk - Pushed out further left */}
-                <div className={`absolute -left-[70px] md:-left-[100px] top-[15%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -left-[100px] top-[15%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-100`}>
                    <div className="animate-float-delayed hover:scale-125 transition-transform duration-500 cursor-pointer">
                       <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-md">
                         <g fill="none" stroke="#F9DB82" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round">
@@ -212,7 +212,7 @@ export default function Page() {
                 </div>
 
                 {/* 2. Orange Cursor Arrow - Pushed down and left */}
-                <div className={`absolute -left-[50px] md:-left-[70px] bottom-[10%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -left-[70px] bottom-[10%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-100`}>
                    <div className="animate-float rotate-[-15deg] cursor-pointer hover:rotate-0 transition-transform">
                       <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
                         <path d="M 25 15 L 25 80 L 45 60 L 65 90 L 80 80 L 60 50 L 90 50 Z" fill="#F3A765" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
@@ -221,8 +221,8 @@ export default function Page() {
                 </div>
 
                 {/* 3. Clover Stamp - Pushed down to clear Portfolio text */}
-                <div className={`absolute left-[30%] md:left-[35%] -bottom-[80px] md:-bottom-[100px] rotate-[-5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
-                   <div className="relative w-[110px] h-[130px] md:w-[130px] md:h-[150px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
+                <div className={`absolute left-[35%] -bottom-[100px] rotate-[-5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-100`}>
+                   <div className="relative w-[130px] h-[150px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
                       <div className="absolute inset-0 bg-white stamp-mask shadow-[0_10px_20px_rgba(0,0,0,0.1)]"></div>
                       <div className="absolute inset-[10px] border-[1.5px] border-[#EEE] z-10 pointer-events-none rounded-[4px]"></div>
 
@@ -248,7 +248,7 @@ export default function Page() {
                 </div>
 
                 {/* 4. Ai Puffy Star - Far Top Right */}
-                <div className={`absolute -right-[40px] md:-right-[60px] -top-[40px] md:-top-[60px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -right-[60px] -top-[60px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,15 61,38 86,41 68,58 74,84 50,70 26,84 32,58 14,41 39,38" fill="#F1934B" stroke="white" strokeWidth="8" strokeLinejoin="round"/>
@@ -258,7 +258,7 @@ export default function Page() {
                 </div>
 
                 {/* 5. Leaf Blob - Spread to top 15% */}
-                <div className={`absolute -right-[60px] md:-right-[100px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -right-[100px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''} scale-100`}>
                    <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
                       <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,10 65,30 90,30 75,50 85,75 50,65 15,75 25,50 10,30 35,30" fill="#B5D799" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
@@ -268,7 +268,7 @@ export default function Page() {
                 </div>
 
                 {/* 6. Figma Logo - Spread to top 42% */}
-                <div className={`absolute -right-[50px] md:-right-[80px] top-[42%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -right-[80px] top-[42%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''} scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="85" height="85" viewBox="0 0 100 100" className="drop-shadow-md">
                          <rect x="15" y="15" width="70" height="70" rx="16" fill="#CDE7BC" stroke="white" strokeWidth="6"/>
@@ -284,7 +284,7 @@ export default function Page() {
                 </div>
 
                 {/* 7. Blender Logo - Spread to top 70% */}
-                <div className={`absolute -right-[40px] md:-right-[90px] top-[70%] rotate-[5deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1100' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -right-[90px] top-[70%] rotate-[5deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-1100' : ''} scale-100`}>
                    <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
                       <svg width="90" height="90" viewBox="0 0 100 100" className="drop-shadow-md">
                          <path d="M50,15 C60,15 65,30 75,35 C90,40 95,50 90,65 C85,75 75,85 60,85 C50,85 35,85 25,75 C15,65 15,50 25,35 C35,30 40,15 50,15 Z" fill="#F1934B" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
@@ -296,7 +296,7 @@ export default function Page() {
                 </div>
 
                 {/* 8. Ps Sticker - Pushed far bottom right */}
-                <div className={`absolute right-[-5px] md:right-[-25px] -bottom-[40px] md:-bottom-[50px] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute right-[-25px] -bottom-[50px] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="90" height="90" viewBox="0 0 100 100" className="drop-shadow-md">
                          <circle cx="50" cy="50" r="40" fill="#89B66B" stroke="white" strokeWidth="6"/>
@@ -318,7 +318,7 @@ export default function Page() {
               <div className="w-full lg:w-[35%] bg-[#CBE0A3] py-8 md:py-16 pr-4 md:pr-8 pl-8 md:pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-8 md:gap-16">
                  {/* Education Tab */}
                  <div className="relative">
-                     <div className="absolute -left-[50px] md:-left-[70px] -top-6 bg-[#537A38] text-white font-['Fredoka'] font-black text-2xl md:text-4xl px-4 md:px-8 py-2 md:py-3 rotate-[-2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
+                     <div className="absolute -left-[70px] -top-6 bg-[#537A38] text-white font-['Fredoka'] font-black text-2xl md:text-4xl px-4 md:px-8 py-2 md:py-3 rotate-[-2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
                         Education
                      </div>
                      <div className="relative z-10 text-[#3A5723] pt-16">
@@ -1741,10 +1741,10 @@ export default function Page() {
           <div className="absolute bottom-[-5%] left-[-5%] w-[50%] h-[70%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 20% 80%)'}}></div>
           <div className="absolute top-[-5%] right-[-5%] w-[50%] h-[60%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 80% 20%)'}}></div>
 
-          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg]">
+          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg] scale-[0.45] md:scale-100 origin-center">
              
              {/* Back folder */}
-             <div className={`absolute inset-0 bg-gradient-to-b from-[#F6B578] to-[#F1934B] rounded-[24px] md:rounded-[30px] border-[6px] border-white translate-x-6 md:translate-x-8 -translate-y-6 md:-translate-y-8 group-hover/folder:translate-x-12 group-hover/folder:-translate-y-12 group-hover/folder:rotate-[2deg] transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 ${entered ? 'animate-layer-up delay-100' : ''}`}>
+             <div className={`absolute inset-0 bg-gradient-to-b from-[#F6B578] to-[#F1934B] rounded-[30px] border-[6px] border-white translate-x-8 -translate-y-8 group-hover/folder:translate-x-12 group-hover/folder:-translate-y-12 group-hover/folder:rotate-[2deg] transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 ${entered ? 'animate-layer-up delay-100' : ''}`}>
                  <div className="absolute inset-0 rounded-[20px] overflow-hidden pointer-events-none">
                      </div>
                  
@@ -1759,30 +1759,30 @@ export default function Page() {
                 FIX: Increased padding-top/bottom to py-20 md:py-32.
                 This makes the folder taller, giving horizontal elements MUCH more room to spread vertically.
              */}
-             <div className={`relative bg-[#FFF0CA] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-8 md:px-32 py-10 md:py-24 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
+             <div className={`relative bg-[#FFF0CA] rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-8 md:px-32 py-10 md:py-24 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
                 
-                <div className="absolute inset-0 rounded-[18px] md:rounded-[24px] overflow-hidden pointer-events-none">
+                <div className="absolute inset-0 rounded-[24px] overflow-hidden pointer-events-none">
                    <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '12px 12px' }}></div>
                 </div>
 
                 {/* Grouped Text + Contact Box */}
-                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 flex flex-col items-start w-full transform rotate-0 mb-4 md:mb-8`}>
+                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 flex flex-col items-start w-full transform rotate-0 mb-8`}>
                    
                    {/* Thankyou Text & CTA Button */}
-                   <div className="relative transform rotate-0 mb-2 md:mb-4 pb-4 md:pb-8 inline-block w-max">
-                      <h2 className="text-[44px] sm:text-[130px] md:text-[150px] font-['Fredoka'] font-black leading-none text-left text-3d-portfolio transition-transform duration-500 hover:scale-[1.02]" style={{ letterSpacing: '0.01em' }}>
+                   <div className="relative transform rotate-0 mb-4 pb-8 inline-block w-max">
+                      <h2 className="text-[150px] font-['Fredoka'] font-black leading-none text-left text-3d-portfolio transition-transform duration-500 hover:scale-[1.02]" style={{ letterSpacing: '0.01em' }}>
                          Thankyou
                       </h2>
 
                       {/* CTA Button (Centered exactly under Thankyou) */}
-                      <div className="absolute transform rotate-0 z-40 -bottom-[50px] md:-bottom-[60px] left-1/2 -translate-x-1/2 inline-block w-max">
-                         <a href="#profile" className="group flex items-center justify-center bg-[#F1934B] hover:bg-[#E8704A] text-white px-6 py-1.5 md:px-14 md:py-3 rounded-full shadow-[0_10px_25px_rgba(241,147,75,0.3)] transition-all duration-300 hover:scale-105 border-[4px] border-white cursor-pointer">
-                            <span className="font-['Fredoka'] font-bold text-lg md:text-3xl tracking-wide drop-shadow-sm">Contact me</span>
+                      <div className="absolute transform rotate-0 z-40 -bottom-[60px] left-1/2 -translate-x-1/2 inline-block w-max">
+                         <a href="#profile" className="group flex items-center justify-center bg-[#F1934B] hover:bg-[#E8704A] text-white px-14 py-3 rounded-full shadow-[0_10px_25px_rgba(241,147,75,0.3)] transition-all duration-300 hover:scale-105 border-[4px] border-white cursor-pointer">
+                            <span className="font-['Fredoka'] font-bold text-3xl tracking-wide drop-shadow-sm">Contact me</span>
                          </a>
 
                          {/* Orange Cursor Arrow (Pinned to bottom-left of CTA) */}
                          <div className="absolute -bottom-[30px] -left-[30px] rotate-[45deg] z-50 animate-float cursor-pointer hover:rotate-[35deg] hover:scale-110 transition-transform">
-                            <svg viewBox="0 0 100 100" className="drop-shadow-md w-[40px] h-[40px] md:w-[70px] md:h-[70px]">
+                            <svg viewBox="0 0 100 100" className="drop-shadow-md w-[70px] h-[70px]">
                                <path d="M 25 15 L 25 80 L 45 60 L 65 90 L 80 80 L 60 50 L 90 50 Z" fill="#FFE885" stroke="#F1934B" strokeWidth="6" strokeLinejoin="round"/>
                             </svg>
                          </div>
@@ -1793,7 +1793,7 @@ export default function Page() {
                 {/* ─── STICKERS (FIX: NO WHITE BORDERS, EXACT POSITIONS) ─── */}
                 
                 {/* 1. Yellow Asterisk - Pushed out further left */}
-                <div className={`absolute -left-[50px] md:-left-[80px] top-[25%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -left-[80px] top-[25%] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-100`}>
                    <div className="animate-float-delayed hover:scale-125 transition-transform duration-500 cursor-pointer">
                       <svg width="80" height="80" viewBox="0 0 100 100" className="drop-shadow-md">
                         <g fill="none" stroke="#F9DB82" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
@@ -1807,8 +1807,8 @@ export default function Page() {
 
 
                 {/* 3. Clover Stamp - Right Edge */}
-                <div className={`absolute -right-[20px] md:-right-[40px] -bottom-[40px] md:-bottom-[50px] rotate-[5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
-                   <div className="relative w-[90px] h-[110px] md:w-[110px] md:h-[130px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
+                <div className={`absolute -right-[40px] -bottom-[50px] rotate-[5deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-100`}>
+                   <div className="relative w-[110px] h-[130px] flex items-center justify-center animate-float hover:scale-110 transition-transform cursor-pointer">
                       <div className="absolute inset-0 bg-white stamp-mask shadow-[0_10px_20px_rgba(0,0,0,0.1)]"></div>
                       <div className="absolute inset-[10px] border-[1.5px] border-[#EEE] z-10 pointer-events-none rounded-[4px]"></div>
 
@@ -1834,7 +1834,7 @@ export default function Page() {
                 </div>
 
                 {/* 4. Ai Puffy Star - Top Right */}
-                <div className={`absolute right-[-20px] md:right-[5%] -top-[30px] md:-top-[40px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute right-[5%] -top-[40px] rotate-[15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-800' : ''} scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="80" height="80" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,15 61,38 86,41 68,58 74,84 50,70 26,84 32,58 14,41 39,38" fill="#F1934B" stroke="none"/>
@@ -1844,7 +1844,7 @@ export default function Page() {
                 </div>
 
                 {/* 5. Leaf Blob - Spread to top 15% */}
-                <div className={`absolute -right-[40px] md:-right-[60px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -right-[60px] top-[15%] rotate-[15deg] z-20 opacity-0 ${entered ? 'animate-sticker-pop delay-900' : ''} scale-100`}>
                    <div className="animate-float-delayed hover:scale-110 transition-transform cursor-pointer">
                       <svg width="75" height="75" viewBox="0 0 100 100" className="drop-shadow-md">
                          <polygon points="50,10 65,30 90,30 75,50 85,75 50,65 15,75 25,50 10,30 35,30" fill="#74A352" stroke="none"/>
@@ -1854,7 +1854,7 @@ export default function Page() {
                 </div>
 
                 {/* 6. Figma Logo - Right side */}
-                <div className={`absolute -right-[30px] md:-right-[50px] top-[45%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -right-[30px] md:-right-[50px] top-[45%] rotate-[10deg] z-30 opacity-0 ${entered ? 'animate-sticker-pop delay-1000' : ''} scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="75" height="75" viewBox="0 0 100 100" className="drop-shadow-md">
                          <circle cx="50" cy="50" r="40" fill="#FFE885" stroke="#89B66B" strokeWidth="4"/>
@@ -1871,7 +1871,7 @@ export default function Page() {
 
 
                 {/* 8. Ps Sticker - Bottom Left edge */}
-                <div className={`absolute -left-[40px] md:-left-[60px] bottom-[25%] md:bottom-[30%] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-65 md:scale-100`}>
+                <div className={`absolute -left-[40px] md:-left-[60px] bottom-[25%] md:bottom-[30%] rotate-[-15deg] z-40 opacity-0 ${entered ? 'animate-sticker-pop delay-1200' : ''} scale-100`}>
                    <div className="animate-float hover:scale-110 transition-transform cursor-pointer">
                       <svg width="80" height="80" viewBox="0 0 100 100" className="drop-shadow-md">
                          <circle cx="50" cy="50" r="40" fill="#74A352" stroke="none"/>
