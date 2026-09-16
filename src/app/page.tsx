@@ -816,7 +816,7 @@ export default function Page() {
 
               {/* 4. LIVE PROTOTYPES */}
               <div className="w-full relative z-20 pb-20 pt-0 max-w-[1400px] mx-auto">
-                 <h3 className="font-['Fredoka'] text-[50px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400 text-center mb-12 tracking-wide drop-shadow-sm">
+                 <h3 className="font-['Fredoka'] text-[50px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400 text-center mb-12 tracking-wide drop-shadow-[0_4px_12px_rgba(255,255,255,0.8)]">
                     Live Prototypes
                  </h3>
                  
