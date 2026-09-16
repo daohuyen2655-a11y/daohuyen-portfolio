@@ -315,10 +315,10 @@ export default function Page() {
            <div className="max-w-[1400px] mx-auto px-6 relative z-20 flex flex-col lg:flex-row gap-12 items-stretch justify-center">
               
               {/* LEFT COLUMN: GREEN PAPER */}
-              <div className="w-full lg:w-[35%] bg-[#CBE0A3] py-16 pr-8 pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-16">
+              <div className="w-full lg:w-[35%] bg-[#CBE0A3] py-8 md:py-16 pr-4 md:pr-8 pl-8 md:pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-8 md:gap-16">
                  {/* Education Tab */}
                  <div className="relative">
-                     <div className="absolute -left-[70px] -top-6 bg-[#537A38] text-white font-['Fredoka'] font-black text-4xl px-8 py-3 rotate-[-2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
+                     <div className="absolute -left-[50px] md:-left-[70px] -top-6 bg-[#537A38] text-white font-['Fredoka'] font-black text-2xl md:text-4xl px-4 md:px-8 py-2 md:py-3 rotate-[-2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
                         Education
                      </div>
                      <div className="relative z-10 text-[#3A5723] pt-16">
@@ -440,10 +440,10 @@ export default function Page() {
               <div className="w-full lg:w-[65%] flex flex-col gap-12">
                  
                  {/* TOP CARD: INFO */}
-                 <div id="profile" className="bg-[#FDF9E7] p-10 md:p-12 rounded-[40px] border-[8px] border-white shadow-[12px_12px_0px_rgba(209,205,188,0.5)] relative rotate-[1deg] flex flex-col xl:flex-row gap-12 items-center xl:items-start scroll-mt-24">
+                 <div id="profile" className="bg-[#FDF9E7] p-5 md:p-12 rounded-[40px] border-[8px] border-white shadow-[12px_12px_0px_rgba(209,205,188,0.5)] relative rotate-[1deg] flex flex-col xl:flex-row gap-12 items-center xl:items-start scroll-mt-24">
                     {/* Polaroid Avatar Frame */}
                     <div className="relative shrink-0 rotate-[-3deg] z-20">
-                       <div className="bg-white p-4 pb-12 rounded-[16px] shadow-[8px_8px_0px_rgba(0,0,0,0.1)] border-[4px] border-white/50 w-[240px]">
+                       <div className="bg-white p-4 pb-12 rounded-[16px] shadow-[8px_8px_0px_rgba(0,0,0,0.1)] border-[4px] border-white/50 w-[160px] md:w-[240px]">
                            <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[8px]">
                                <img src="/assets/huyen-dao-avatar-2.jpg" className="absolute max-w-none" style={{ width: '270%', height: 'auto', left: '-52%', top: '-75%' }} alt="Avatar" />
                            </div>
@@ -1000,7 +1000,7 @@ export default function Page() {
                              </h4>
                           </div>
                           
-                          <div className="relative w-[310px] h-[660px] rounded-[52px] p-[8px] bg-white border border-gray-200 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)]" style={{ WebkitBoxReflect: "below 12px linear-gradient(transparent 50%, rgba(255,255,255,0.25))" }}>
+                          <div className="relative w-[310px] h-[660px] rounded-[52px] p-[8px] bg-white border border-gray-200 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)]" >
                              <div className="w-full h-full bg-gray-50 rounded-[44px] overflow-hidden relative border border-gray-100 shadow-[inset_0_0_10px_rgba(0,0,0,0.05)]">
                                 <div className="absolute top-[14px] left-1/2 -translate-x-1/2 w-[100px] h-[30px] bg-black rounded-full z-20"></div>
                                 <video src={`/assets/yapsu-ai/${vid.src}`} autoPlay muted loop playsInline className="w-full h-full object-cover" />
@@ -1176,7 +1176,7 @@ export default function Page() {
                   
                   <div className="relative w-full max-w-6xl mx-auto group">
                       {/* Carousel Container */}
-                      <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-hidden transform scale-90 md:scale-100">
+                      <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-visible transform scale-90 md:scale-100" style={{ maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)" }}>
                           {[
                               "Q&A.jpg", 
                               "THÔNG BÁO KẾT QUẢ.jpg", 
@@ -1377,7 +1377,7 @@ export default function Page() {
                       Digital & Social
                   </h3>
                   
-                  <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center transform scale-90 md:scale-100">
+                  <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-visible transform scale-90 md:scale-100" style={{ maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)" }}>
                       {[
                           "MỞ ĐƠN.jpg",
                           "THÔNG BÁO QUÁN QUÂN.jpg",
@@ -1759,7 +1759,7 @@ export default function Page() {
                 FIX: Increased padding-top/bottom to py-20 md:py-32.
                 This makes the folder taller, giving horizontal elements MUCH more room to spread vertically.
              */}
-             <div className={`relative bg-[#FFF0CA] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-16 md:px-32 py-16 md:py-24 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
+             <div className={`relative bg-[#FFF0CA] rounded-[24px] md:rounded-[30px] border-[6px] md:border-[8px] border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] px-8 md:px-32 py-10 md:py-24 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/folder:-translate-y-2 group-hover/folder:shadow-[0_25px_50px_rgba(0,0,0,0.1)] opacity-0 ${entered ? 'animate-layer-up delay-300' : ''}`}>
                 
                 <div className="absolute inset-0 rounded-[18px] md:rounded-[24px] overflow-hidden pointer-events-none">
                    <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: 'radial-gradient(#000 1.5px, transparent 1.5px)', backgroundSize: '12px 12px' }}></div>
@@ -1770,7 +1770,7 @@ export default function Page() {
                    
                    {/* Thankyou Text & CTA Button */}
                    <div className="relative transform rotate-0 mb-2 md:mb-4 pb-4 md:pb-8 inline-block w-max">
-                      <h2 className="text-[100px] sm:text-[130px] md:text-[150px] font-['Fredoka'] font-black leading-none text-left text-3d-portfolio transition-transform duration-500 hover:scale-[1.02]" style={{ letterSpacing: '0.01em' }}>
+                      <h2 className="text-[60px] sm:text-[130px] md:text-[150px] font-['Fredoka'] font-black leading-none text-left text-3d-portfolio transition-transform duration-500 hover:scale-[1.02]" style={{ letterSpacing: '0.01em' }}>
                          Thankyou
                       </h2>
 
