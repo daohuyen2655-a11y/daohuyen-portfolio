@@ -140,7 +140,7 @@ export default function Page() {
           <div className="absolute bottom-[-5%] left-[-5%] w-[50%] h-[70%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 20% 80%)'}}></div>
           <div className="absolute top-[-5%] right-[-5%] w-[50%] h-[60%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 80% 20%)'}}></div>
 
-          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg] scale-[0.6] md:scale-100 origin-center">
+          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg] scale-[0.75] md:scale-100 origin-center">
              
              {/* Back folder */}
              <div className={`absolute inset-0 bg-gradient-to-b from-[#F6B578] to-[#F1934B] rounded-[24px] md:rounded-[30px] border-[6px] border-white translate-x-6 md:translate-x-8 -translate-y-6 md:-translate-y-8 group-hover/folder:translate-x-12 group-hover/folder:-translate-y-12 group-hover/folder:rotate-[2deg] transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 ${entered ? 'animate-layer-up delay-100' : ''}`}>
@@ -166,18 +166,18 @@ export default function Page() {
 
                 {/* Ribbon and Green Tab (2025) */}
                 <div className={`absolute -top-[70px] left-[12%] z-20 flex flex-col items-center drop-shadow-md group/tab cursor-pointer opacity-0 ${entered ? 'animate-layer-up delay-500' : ''}`}>
-                   <div className="absolute top-[40px] w-[50px] md:w-[60px] h-[100px] bg-[#E8704A] -z-10 transition-transform duration-500 group-hover/tab:scale-y-110 origin-top rotate-[5deg]" style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)'}}>
+                   <div className="absolute top-[40px] w-[34px] md:w-[60px] h-[100px] bg-[#E8704A] -z-10 transition-transform duration-500 group-hover/tab:scale-y-110 origin-top rotate-[5deg]" style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)'}}>
                       </div>
-                   <div className="relative w-[120px] md:w-[130px] h-[55px] md:h-[60px] transition-transform duration-500 group-hover/tab:-translate-y-2 flex items-center justify-center">
+                   <div className="relative w-[80px] md:w-[130px] h-[38px] md:h-[60px] transition-transform duration-500 group-hover/tab:-translate-y-2 flex items-center justify-center">
                       <svg width="100%" height="100%" viewBox="0 0 130 60" preserveAspectRatio="none" className="absolute inset-0">
                          <path d="M 12 5 L 118 5 L 130 60 L 0 60 Z" fill="#89B66B" stroke="white" strokeWidth="6" strokeLinejoin="round"/>
                       </svg>
-                      <span className="relative z-10 font-['Fredoka'] text-white text-3xl font-black mt-1">2026</span>
+                      <span className="relative z-10 font-['Fredoka'] text-white text-xl md:text-3xl font-black mt-1">2026</span>
                    </div>
                 </div>
 
                 {/* Grouped Text + Name Tag */}
-                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg] -translate-y-3 md:-translate-y-4`}>
+                <div className={`opacity-0 ${entered ? 'animate-sticker-pop delay-600' : ''} relative z-30 transform rotate-[5deg] -translate-y-8 md:-translate-y-4`}>
                    
                    <h1 className="text-[60px] sm:text-[150px] md:text-[160px] font-['Fredoka'] font-black leading-none text-center text-3d-portfolio transition-all duration-500 group-hover/folder:text-3d-portfolio-hover group-hover/folder:scale-[1.02]" style={{ letterSpacing: '-0.02em' }}>
                       Portfolio
@@ -1176,7 +1176,7 @@ export default function Page() {
                   
                   <div className="relative w-full max-w-6xl mx-auto group">
                       {/* Carousel Container */}
-                      <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-visible transform scale-90 md:scale-100" style={{ maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)" }}>
+                      <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-visible transform scale-90 md:scale-100" style={{ maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)" }}>
                           {[
                               "Q&A.jpg", 
                               "THÔNG BÁO KẾT QUẢ.jpg", 
@@ -1236,7 +1236,7 @@ export default function Page() {
                                           filter: `blur(${blur})`
                                       }}
                                   >
-                                      <img  src={`/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/SOCIAL%20POST/${filename}`} alt={filename.replace('.jpg', '')} className="h-[280px] sm:h-[350px] md:h-[420px] w-auto max-w-none block object-contain" />
+                                      <img  src={`/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/SOCIAL%20POST/${filename}`} alt={filename.replace('.jpg', '')} className="max-h-[260px] md:h-[420px] md:max-h-none w-auto max-w-[82vw] md:max-w-none block object-contain" />
                                   </div>
                               );
                           })}
@@ -1377,7 +1377,7 @@ export default function Page() {
                       Digital & Social
                   </h3>
                   
-                  <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-visible transform scale-90 md:scale-100" style={{ maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)" }}>
+                  <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-visible transform scale-90 md:scale-100" style={{ maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)" }}>
                       {[
                           "MỞ ĐƠN.jpg",
                           "THÔNG BÁO QUÁN QUÂN.jpg",
@@ -1445,7 +1445,7 @@ export default function Page() {
                                       pointerEvents: pointerEvents as any
                                   }}
                               >
-                                  <img  src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Social%20Posts/${filename}`} alt={filename.replace('.jpg', '')} className="h-[280px] sm:h-[350px] md:h-[420px] w-auto max-w-none block object-contain" />
+                                  <img  src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Social%20Posts/${filename}`} alt={filename.replace('.jpg', '')} className="max-h-[260px] md:h-[420px] md:max-h-none w-auto max-w-[82vw] md:max-w-none block object-contain" />
                               </div>
                           );
                       })}
@@ -1770,19 +1770,19 @@ export default function Page() {
                    
                    {/* Thankyou Text & CTA Button */}
                    <div className="relative transform rotate-0 mb-2 md:mb-4 pb-4 md:pb-8 inline-block w-max">
-                      <h2 className="text-[60px] sm:text-[130px] md:text-[150px] font-['Fredoka'] font-black leading-none text-left text-3d-portfolio transition-transform duration-500 hover:scale-[1.02]" style={{ letterSpacing: '0.01em' }}>
+                      <h2 className="text-[44px] sm:text-[130px] md:text-[150px] font-['Fredoka'] font-black leading-none text-left text-3d-portfolio transition-transform duration-500 hover:scale-[1.02]" style={{ letterSpacing: '0.01em' }}>
                          Thankyou
                       </h2>
 
                       {/* CTA Button (Centered exactly under Thankyou) */}
                       <div className="absolute transform rotate-0 z-40 -bottom-[50px] md:-bottom-[60px] left-1/2 -translate-x-1/2 inline-block w-max">
-                         <a href="#profile" className="group flex items-center justify-center bg-[#F1934B] hover:bg-[#E8704A] text-white px-10 py-2 md:px-14 md:py-3 rounded-full shadow-[0_10px_25px_rgba(241,147,75,0.3)] transition-all duration-300 hover:scale-105 border-[4px] border-white cursor-pointer">
-                            <span className="font-['Fredoka'] font-bold text-2xl md:text-3xl tracking-wide drop-shadow-sm">Contact me</span>
+                         <a href="#profile" className="group flex items-center justify-center bg-[#F1934B] hover:bg-[#E8704A] text-white px-6 py-1.5 md:px-14 md:py-3 rounded-full shadow-[0_10px_25px_rgba(241,147,75,0.3)] transition-all duration-300 hover:scale-105 border-[4px] border-white cursor-pointer">
+                            <span className="font-['Fredoka'] font-bold text-lg md:text-3xl tracking-wide drop-shadow-sm">Contact me</span>
                          </a>
 
                          {/* Orange Cursor Arrow (Pinned to bottom-left of CTA) */}
                          <div className="absolute -bottom-[30px] -left-[30px] rotate-[45deg] z-50 animate-float cursor-pointer hover:rotate-[35deg] hover:scale-110 transition-transform">
-                            <svg width="70" height="70" viewBox="0 0 100 100" className="drop-shadow-md">
+                            <svg viewBox="0 0 100 100" className="drop-shadow-md w-[40px] h-[40px] md:w-[70px] md:h-[70px]">
                                <path d="M 25 15 L 25 80 L 45 60 L 65 90 L 80 80 L 60 50 L 90 50 Z" fill="#FFE885" stroke="#F1934B" strokeWidth="6" strokeLinejoin="round"/>
                             </svg>
                          </div>
