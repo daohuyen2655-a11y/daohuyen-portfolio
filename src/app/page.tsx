@@ -1373,6 +1373,9 @@ export default function Page() {
         {/* ─── 07. ZODIAC ─── */}
         <section id="zodiac" className="relative w-full pt-32 pb-[200px] md:pb-[250px] bg-gradient-to-b from-[#F9F7F3] via-[#F4F0E8] to-[#EBE4D5] overflow-hidden">
            
+           {/* LUXURY GOLD THREAD DIVIDER */}
+           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[85%] max-w-[1200px] h-[2px] bg-gradient-to-r from-transparent via-[#C5A059] to-transparent opacity-80 shadow-[0_0_10px_rgba(197,160,89,0.5)] z-30"></div>
+
            <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}></div>
 
            <div className="max-w-[1400px] mx-auto relative z-20 flex flex-col items-center">
