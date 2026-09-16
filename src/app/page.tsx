@@ -1096,7 +1096,7 @@ export default function Page() {
             </h3>
             
             {/* MASONRY LAYOUT FOR PERFECT PACKING */}
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 w-full max-w-7xl mx-auto">
+            <div className="columns-2 lg:columns-3 gap-4 md:gap-6 w-full max-w-7xl mx-auto">
                 
                 {/* Video Block */}
                 <div className="relative rounded-[20px] overflow-hidden border-2 border-cyan-500/50 group shadow-[0_0_20px_rgba(34,211,238,0.2)] break-inside-avoid mb-6 inline-block w-full">
@@ -1287,7 +1287,7 @@ export default function Page() {
                       Event Applications
                   </h3>
                   
-                  <div className="columns-1 md:columns-2 gap-8 w-full max-w-4xl mx-auto">
+                  <div className="columns-2 gap-4 md:gap-8 w-full max-w-4xl mx-auto">
                       {[
                           { file: "FRAME tím.jpg", name: "Avatar Frame" },
                           { file: "BACKDROP tím.jpg", name: "Event Backdrop" },
@@ -1354,13 +1354,13 @@ export default function Page() {
                           <h4 className="font-['Quicksand'] font-bold text-xl text-[#FFF2B2] tracking-wider uppercase drop-shadow-md">Stage Backdrop</h4>
                       </div>
                       
-                      <div className="columns-1 md:columns-3 gap-8 w-full">
+                      <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-6 w-full pb-8 scrollbar-hide px-6 md:px-0 md:grid md:grid-cols-3">
                           {[
                               { file: "phướn_1.jpg", name: "Vertical Banner 1" },
                               { file: "phướn_Huyen.jpg", name: "Vertical Banner 2" },
                               { file: "phướn_Thu.jpg", name: "Vertical Banner 3" }
                           ].map((item, idx) => (
-                              <div key={idx} className="flex flex-col items-center gap-5 mb-8 break-inside-avoid">
+                              <div key={idx} className="flex flex-col items-center gap-5 mb-8 shrink-0 snap-center w-[85%] md:w-auto">
                                   <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
                                       <img  src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Print%20&%20Event%20Applications/${item.file}`} alt={item.name} className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
                                   </div>
@@ -1516,7 +1516,7 @@ export default function Page() {
                       Digital & Social
                   </h3>
                   
-                  <div className="flex flex-wrap justify-center gap-6 w-full max-w-[1200px] mx-auto">
+                  <div className="flex flex-row md:flex-wrap justify-start md:justify-center overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-6 w-full max-w-[1200px] mx-auto px-6 md:px-0 pb-12 md:pb-0 scrollbar-hide">
                       {[
                           "NTT-04.jpg",
                           "NTT-01.jpg",
@@ -1524,7 +1524,7 @@ export default function Page() {
                           "NTT-03.jpg",
                           "Thông báo danh sách nhận ĐRL.jpg"
                       ].map((filename, idx) => (
-                          <div key={idx} className="relative rounded-[16px] overflow-hidden border-[4px] border-white shadow-[0_15px_30px_rgba(88,179,211,0.15)] group hover:border-[#8DD1E8] transition-colors duration-300 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0">
+                          <div key={idx} className="relative rounded-[16px] overflow-hidden border-[4px] border-white shadow-[0_15px_30px_rgba(88,179,211,0.15)] group hover:border-[#8DD1E8] transition-colors duration-300 w-[85%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-center">
                               <img src={`/assets/portfolio_assets/CC%20FTU/Talkshow/SOCIAL%20POST/${filename}`} alt={filename.replace('.jpg', '')} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500"  />
                           </div>
                       ))}
@@ -1704,7 +1704,7 @@ export default function Page() {
                           </h3>
                       </div>
                   </div>
-                  <div className="columns-1 md:columns-2 gap-6 w-full max-w-4xl mx-auto">
+                  <div className="columns-2 gap-4 md:gap-6 w-full max-w-4xl mx-auto">
                       {/* Video block restored */}
                       <div className="relative rounded-[20px] overflow-hidden border-[4px] border-white group shadow-lg break-inside-avoid mb-6 inline-block w-full" style={{ lineHeight: 0 }}>
                           <video src="/assets/portfolio_assets/PAINTASO/SOCIAL%20POSTS/SOCIAL%20POST%20(GIF)%20AI%20SẼ%20ĐI%20CÙNG%20BẠN%20ĐẾN%20WORKSHOP.mp4" autoPlay muted loop playsInline style={{ width: '100%', display: 'block' }} />
