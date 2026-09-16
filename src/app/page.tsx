@@ -835,7 +835,7 @@ export default function Page() {
                              </h4>
                           </div>
                           
-                          <div className="relative w-[310px] h-[660px] rounded-[52px] p-[8px] bg-white border border-gray-200 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)]" style={{ WebkitBoxReflect: "below 12px linear-gradient(transparent 60%, rgba(255,255,255,0.4))" }}>
+                          <div className="relative w-[310px] h-[660px] rounded-[52px] p-[8px] bg-white border border-gray-200 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)]" style={{ WebkitBoxReflect: "below 12px linear-gradient(transparent 85%, rgba(255,255,255,0.15))" }}>
                              <div className="w-full h-full bg-gray-50 rounded-[44px] overflow-hidden relative border border-gray-100 shadow-[inset_0_0_10px_rgba(0,0,0,0.05)]">
                                 <div className="absolute top-[14px] left-1/2 -translate-x-1/2 w-[100px] h-[30px] bg-black rounded-full z-20"></div>
                                 <video src={`/assets/yapsu-ai/${vid.src}`} autoPlay muted loop playsInline className="w-full h-full object-cover" />
@@ -851,8 +851,15 @@ export default function Page() {
            </div>
         </section>
 
-        {/* ─── SUNSET TRANSITION BRIDGE ─── */}
-        <div className="w-full h-[300px] bg-gradient-to-b from-[#FFD8B5] via-[#8A4A73] to-[#06112E] relative z-0"></div>
+        
+
+        
+        {/* ─── TORN PAPER EDGE (JAGGED RIP) ─── */}
+        <div className="w-full leading-none z-10 relative bg-[#FFD8B5]">
+            <svg viewBox="0 0 1200 40" preserveAspectRatio="none" className="w-full h-[30px] md:h-[40px] block" style={{filter: 'drop-shadow(0px 10px 10px rgba(0,0,0,0.1))'}}>
+                <path d="M0,0 L1200,0 L1200,20 L1180,35 L1160,15 L1140,30 L1120,10 L1100,35 L1080,20 L1060,35 L1040,15 L1020,30 L1000,10 L980,35 L960,20 L940,30 L920,15 L900,35 L880,10 L860,30 L840,15 L820,35 L800,20 L780,35 L760,10 L740,30 L720,15 L700,35 L680,20 L660,30 L640,10 L620,35 L600,15 L580,30 L560,10 L540,35 L520,20 L500,35 L480,15 L460,30 L440,10 L420,35 L400,20 L380,30 L360,15 L340,35 L320,10 L300,30 L280,15 L260,35 L240,20 L220,35 L200,10 L180,30 L160,15 L140,35 L120,20 L100,35 L80,15 L60,30 L40,10 L20,35 L0,15 Z" fill="#06112E"></path>
+            </svg>
+        </div>
 
         {/* ─── 02. CHINESE DEBATE 2026 ─── */}
         <section id="chinese-debate-2026" className="relative w-full pt-12 pb-24 bg-gradient-to-b from-[#06112E] to-[#0B1F4D] text-white overflow-hidden">
