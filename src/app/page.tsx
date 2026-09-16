@@ -140,7 +140,7 @@ export default function Page() {
           <div className="absolute bottom-[-5%] left-[-5%] w-[50%] h-[70%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 20% 80%)'}}></div>
           <div className="absolute top-[-5%] right-[-5%] w-[50%] h-[60%] bg-halftone-large opacity-[0.25] z-0" style={{clipPath: 'circle(50% at 80% 20%)'}}></div>
 
-          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg]">
+          <div className="relative z-30 inline-flex flex-col items-center mt-12 group/folder transform -rotate-[8deg] skew-x-[-2deg] scale-[0.6] md:scale-100 origin-center">
              
              {/* Back folder */}
              <div className={`absolute inset-0 bg-gradient-to-b from-[#F6B578] to-[#F1934B] rounded-[24px] md:rounded-[30px] border-[6px] border-white translate-x-6 md:translate-x-8 -translate-y-6 md:-translate-y-8 group-hover/folder:translate-x-12 group-hover/folder:-translate-y-12 group-hover/folder:rotate-[2deg] transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 ${entered ? 'animate-layer-up delay-100' : ''}`}>
