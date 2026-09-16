@@ -849,16 +849,12 @@ export default function Page() {
               </div>
 
            </div>
-
-           {/* SVG Wave Transition to Chinese Debate */}
-           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10" style={{ transform: 'translateY(1px)' }}>
-              <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[60px] md:h-[120px] block">
-                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.85,121.22,192.4,111.45,236.4,104.5,282.91,73.1,321.39,56.44Z" fill="#06112E"></path>
-              </svg>
-           </div>
         </section>
 
-                {/* ─── 02. CHINESE DEBATE 2026 ─── */}
+        {/* ─── SUNSET TRANSITION BRIDGE ─── */}
+        <div className="w-full h-[300px] bg-gradient-to-b from-[#FFD8B5] via-[#8A4A73] to-[#06112E] relative z-0"></div>
+
+        {/* ─── 02. CHINESE DEBATE 2026 ─── */}
         <section id="chinese-debate-2026" className="relative w-full pt-12 pb-24 bg-gradient-to-b from-[#06112E] to-[#0B1F4D] text-white overflow-hidden">
     {/* Decorative Tech Grid Background */}
     <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
