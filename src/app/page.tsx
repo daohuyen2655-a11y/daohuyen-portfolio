@@ -856,6 +856,14 @@ export default function Page() {
         
         
 
+        
+        {/* ─── ELEGANT HORIZON CURVE ─── */}
+        <div className="w-full leading-none z-10 relative bg-[#FFD8B5]">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[60px] md:h-[120px] block">
+                <path d="M0,120 L1200,120 L1200,120 C800,0 400,0 0,120 Z" fill="#06112E"></path>
+            </svg>
+        </div>
+
         {/* ─── 02. CHINESE DEBATE 2026 ─── */}
         <section id="chinese-debate-2026" className="relative w-full pt-12 pb-24 bg-gradient-to-b from-[#06112E] to-[#0B1F4D] text-white overflow-hidden">
     {/* Decorative Tech Grid Background */}
