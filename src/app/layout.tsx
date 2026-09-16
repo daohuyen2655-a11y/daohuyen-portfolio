@@ -37,6 +37,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Using Balsamiq Sans for the bouncy scrapbook feel, and Quicksand for body text */}
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+        <link rel="preload" href="/assets/huyen-dao-avatar-2.jpg" as="image" />
       </head>
       <body className="antialiased">
         {children}
