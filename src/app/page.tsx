@@ -1371,7 +1371,7 @@ export default function Page() {
         </section>
 
         {/* ─── 07. ZODIAC ─── */}
-        <section id="zodiac" className="relative w-full pt-32 pb-[200px] md:pb-[250px] bg-gradient-to-b from-[#F9F7F3] via-[#F4F0E8] to-[#EBE4D5] overflow-hidden -mt-8 rounded-t-[40px] md:rounded-t-[60px] shadow-[0_-20px_60px_rgba(0,0,0,0.08)] border-t border-white/60 z-30">
+        <section id="zodiac" className="relative w-full pt-32 pb-[200px] md:pb-[250px] bg-gradient-to-b from-[#F9F7F3] via-[#F4F0E8] to-[#EBE4D5] overflow-hidden -mt-8 rounded-t-[40px] md:rounded-t-[60px] shadow-[0_-15px_40px_rgba(212,175,55,0.25)] border-t-[3px] border-x-[3px] border-b-0 border-[#D4AF37] z-30">
            
            <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}></div>
 
