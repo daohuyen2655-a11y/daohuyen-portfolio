@@ -658,7 +658,7 @@ export default function Page() {
         </section>
 
         {/* ─── 01. YAPSU AI ─── */}
-        <section id="yapsu-ai" className="relative w-full pt-12 pb-32 text-[#334155] font-sans" style={{ background: "linear-gradient(to bottom, #FCFBF9 0%, #FFF3E6 50%, #FFD8B5 75%, #1F1533 90%, #06112E 100%)" }}>
+        <section id="yapsu-ai" className="relative w-full pt-12 pb-32 bg-gradient-to-b from-[#FCFBF9] via-[#FFF3E6] to-[#FFD8B5] text-[#334155] font-sans">
            
            {/* Transition from TOC (Beige) to Yapsu (Light) */}
            <div className="absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-[#F6F4EB] to-[#FCFBF9] z-10 pointer-events-none"></div>
