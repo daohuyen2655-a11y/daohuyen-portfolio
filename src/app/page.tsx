@@ -785,7 +785,7 @@ export default function Page() {
               </div>
 
               {/* Grid 4 Columns */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full justify-items-center">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10 w-full justify-items-center">
                  {[
                     { id: "01", title: "Yapsu AI", color: "#F1934B", anchor: "yapsu-ai" },
                     { id: "02", title: "Chinese Debate '26", color: "#4EC4E1", anchor: "chinese-debate-2026" },
@@ -796,15 +796,15 @@ export default function Page() {
                     { id: "07", title: "Zodiac", color: "#2C3E50", anchor: "zodiac" },
                     { id: "08", title: "Paintaso", color: "#E53935", anchor: "paintaso" }
                  ].map((item, idx) => (
-                    <a key={idx} href={`#${item.anchor}`} className="group relative w-full max-w-[280px] h-[180px] block">
+                    <a key={idx} href={`#${item.anchor}`} className="group relative w-full max-w-[280px] h-[140px] md:h-[180px] block">
                        {/* Shadow / Base layer - solid color matching banner */}
                        <div className="absolute inset-0 bg-[#F9B658] rounded-[28px] translate-y-2 translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-3 group-hover:translate-x-3 transition-all duration-300 border-[3px] border-[#222]"></div>
                        
                        {/* Top Card layer */}
-                       <div className="absolute inset-0 bg-white rounded-[28px] border-[3px] border-[#E8E6DD] group-hover:border-[#222] transition-colors duration-300 flex flex-col justify-between p-6 overflow-hidden z-10">
+                       <div className="absolute inset-0 bg-white rounded-[20px] md:rounded-[28px] border-[2px] md:border-[3px] border-[#E8E6DD] group-hover:border-[#222] transition-colors duration-300 flex flex-col justify-between p-4 md:p-6 overflow-hidden z-10">
                           
                           {/* Number Watermark (Fixed position to avoid cut-off) */}
-                          <div className="absolute right-4 bottom-2 text-[65px] font-['Fredoka'] font-black text-[#F0EFE6] group-hover:text-[#F9B658] transition-colors duration-300 z-0 leading-none">
+                          <div className="absolute right-2 md:right-4 bottom-0 md:bottom-2 text-[45px] md:text-[65px] font-['Fredoka'] font-black text-[#F0EFE6] group-hover:text-[#F9B658] transition-colors duration-300 z-0 leading-none">
                              {item.id}
                           </div>
 
@@ -812,7 +812,7 @@ export default function Page() {
                           <div className="w-10 h-2 bg-[#E8E6DD] group-hover:bg-[#222] rounded-full transition-colors duration-300 z-10"></div>
                           
                           {/* Title */}
-                          <h3 className="font-['Fredoka'] font-bold text-2xl text-[#475569] group-hover:text-[#222] leading-tight z-10 w-[80%] relative">
+                          <h3 className="font-['Fredoka'] font-bold text-lg md:text-2xl text-[#475569] group-hover:text-[#222] leading-tight z-10 w-[90%] md:w-[80%] relative">
                              {item.title}
                           </h3>
                        </div>
@@ -985,14 +985,14 @@ export default function Page() {
                     Live Prototypes
                  </h3>
                  
-                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-16 w-full mt-0">
+                 <div className="flex flex-row lg:justify-center items-start lg:items-center gap-6 md:gap-16 w-full mt-0 overflow-x-auto lg:overflow-visible snap-x snap-mandatory px-8 lg:px-0 pb-20 lg:pb-0 scrollbar-hide">
                     
                     {[
                        { title: "Onboarding", src: "onboarding-feature.mp4" },
                        { title: "Roleplay", src: "roleplay-feature.mp4" },
                        { title: "Roadmap", src: "roadmap-drill-feature.mp4" }
                     ].map((vid, idx) => (
-                       <div key={idx} className="flex flex-col items-center transform scale-[0.8] md:scale-100 mb-[-50px] md:mb-0 origin-top">
+                       <div key={idx} className="flex flex-col items-center shrink-0 snap-center w-[310px] md:w-auto">
                           
                           <div className="mb-10 px-8 py-3 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center">
                              <h4 className="font-['Fredoka'] text-[24px] font-bold text-[#334155] tracking-wide">
