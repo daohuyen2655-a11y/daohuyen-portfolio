@@ -825,7 +825,7 @@ export default function Page() {
                     {[
                        { title: "Onboarding", src: "onboarding-feature.mp4" },
                        { title: "Roleplay", src: "roleplay-feature.mp4" },
-                       { title: "Roadmap", src: "roadmap-drill-feature.mov" }
+                       { title: "Roadmap", src: "roadmap-drill-feature.mp4" }
                     ].map((vid, idx) => (
                        <div key={idx} className="flex flex-col items-center">
                           
