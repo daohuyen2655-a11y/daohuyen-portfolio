@@ -477,7 +477,12 @@ export default function Page() {
                        
                        <div className="flex justify-start">
                            <a href="https://www.linkedin.com/in/huyen-dao-584a53297/" target="_blank" rel="noopener noreferrer" className="font-['Fredoka'] font-black text-2xl bg-[#EBA355] text-white px-8 py-3 rounded-full border-[6px] border-white shadow-[6px_6px_0px_#C98133] hover:translate-y-1 hover:shadow-[3px_3px_0px_#C98133] transition-all rotate-[-2deg]" style={{textShadow: '1px 1px 0px rgba(0,0,0,0.2)'}}>
-                               My LinkedIn ➔
+                               My LinkedIn <span className="inline-flex items-center ml-1">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                 </span>
                            </a>
                        </div>
                     </div>
@@ -577,28 +582,188 @@ export default function Page() {
         <div className="relative w-full overflow-hidden rotate-[-1.5deg] bg-[#F9B658] border-y-[4px] border-[#333] z-40 -mt-8 -mb-4 shadow-sm flex flex-col justify-center">
             <div className="animate-marquee-infinite flex whitespace-nowrap font-['Fredoka'] font-black text-2xl md:text-3xl text-[#222] py-2.5 w-max">
                 <div className="shrink-0 flex items-center gap-8 px-4">
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
                 </div>
                 <div className="shrink-0 flex items-center gap-8 px-4">
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
-                    <span>PRODUCT DESIGN</span><span className="text-xl">✳</span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
+                    <span>PRODUCT DESIGN</span><span className="text-xl inline-flex items-center justify-center translate-y-[2px]">
+                        <svg width="18" height="18" viewBox="0 0 100 100">
+                           <g fill="none" stroke="#222" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M 50 15 L 50 85" />
+                              <path d="M 20 35 L 80 65" />
+                              <path d="M 20 65 L 80 35" />
+                           </g>
+                        </svg>
+                    </span>
                 </div>
             </div>
         </div>
@@ -1419,7 +1584,12 @@ export default function Page() {
                                       {page.title}
                                   </h3>
                                   <button onClick={() => setActiveZodiacPage(prev => (prev + 1) % 5)} className="group flex items-center gap-2 font-sans font-light tracking-widest text-[#8C8377] hover:text-[#2C2822] transition-colors cursor-pointer text-[10px] sm:text-xs md:text-sm px-2 sm:px-4 py-2 uppercase">
-                                      NEXT <span className="group-hover:translate-x-1 transition-transform">➔</span>
+                                      NEXT <span className="group-hover:translate-x-1 transition-transform inline-flex items-center ml-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
                                   </button>
                               </div>
                               
