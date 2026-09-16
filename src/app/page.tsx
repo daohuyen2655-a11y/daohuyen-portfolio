@@ -1707,7 +1707,7 @@ export default function Page() {
                   <div className="columns-1 md:columns-2 gap-6 w-full max-w-4xl mx-auto">
                       {/* Video block restored */}
                       <div className="relative rounded-[20px] overflow-hidden border-[4px] border-white group shadow-lg break-inside-avoid mb-6 inline-block w-full" style={{ lineHeight: 0 }}>
-                          <video src="/assets/portfolio_assets/PAINTASO/SOCIAL%20POSTS/SOCIAL%20POST%20(GIF)%20AI%20SẼ%20ĐI%20CÙNG%20BẠN%20ĐẾN%20WORKSHOP.mov" autoPlay muted loop playsInline style={{ width: '100%', display: 'block' }} />
+                          <video src="/assets/portfolio_assets/PAINTASO/SOCIAL%20POSTS/SOCIAL%20POST%20(GIF)%20AI%20SẼ%20ĐI%20CÙNG%20BẠN%20ĐẾN%20WORKSHOP.mp4" autoPlay muted loop playsInline style={{ width: '100%', display: 'block' }} />
                       </div>
                       {/* Image posts */}
                       {[
