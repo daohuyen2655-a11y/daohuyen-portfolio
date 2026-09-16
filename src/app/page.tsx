@@ -109,7 +109,7 @@ export default function Page() {
          </svg>
          
          <div className="relative z-10 flex flex-col items-center">
-            <h1 className="text-[80px] sm:text-[100px] md:text-[120px] mb-8 text-center leading-[1.1] rotate-[-2deg] font-['Fredoka'] font-black text-stroke-white-shadow-orange animate-[fade-in-up_0.8s_ease-out_forwards] cursor-default hover:scale-105 hover:rotate-2 transition-transform duration-500 opacity-0">
+            <h1 className="text-[55px] sm:text-[80px] md:text-[120px] mb-8 text-center leading-[1.1] rotate-[-2deg] font-['Fredoka'] font-black text-stroke-white-shadow-orange animate-[fade-in-up_0.8s_ease-out_forwards] cursor-default hover:scale-105 hover:rotate-2 transition-transform duration-500 opacity-0 w-[95%] mx-auto break-words">
                Welcome to<br/>My Scrapbook
             </h1>
             
