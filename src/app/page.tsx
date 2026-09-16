@@ -315,7 +315,7 @@ export default function Page() {
            <div className="max-w-[1400px] mx-auto px-6 relative z-20 flex flex-col lg:flex-row gap-12 items-stretch justify-center">
               
               {/* LEFT COLUMN: GREEN PAPER */}
-              <div className="w-full lg:w-[35%] bg-[#CBE0A3] py-8 md:py-16 pr-4 md:pr-8 pl-8 md:pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-8 md:gap-16">
+              <div className="w-full lg:w-[35%] order-2 lg:order-1 bg-[#CBE0A3] py-8 md:py-16 pr-4 md:pr-8 pl-8 md:pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-8 md:gap-16">
                  {/* Education Tab */}
                  <div className="relative">
                      <div className="absolute -left-[70px] -top-6 bg-[#537A38] text-white font-['Fredoka'] font-black text-2xl md:text-4xl px-4 md:px-8 py-2 md:py-3 rotate-[-2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
@@ -437,7 +437,7 @@ export default function Page() {
               </div>
 
               {/* RIGHT COLUMN: INFO CARD & EXPERIENCE */}
-              <div className="w-full lg:w-[65%] flex flex-col gap-12">
+              <div className="w-full lg:w-[65%] order-1 lg:order-2 flex flex-col gap-12">
                  
                  {/* TOP CARD: INFO */}
                  <div id="profile" className="bg-[#FDF9E7] p-5 md:p-12 rounded-[40px] border-[8px] border-white shadow-[12px_12px_0px_rgba(209,205,188,0.5)] relative rotate-[1deg] flex flex-col xl:flex-row gap-12 items-center xl:items-start scroll-mt-24">
