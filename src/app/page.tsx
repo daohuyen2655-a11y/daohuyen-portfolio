@@ -857,7 +857,7 @@ export default function Page() {
                     </div>
                  </div>
                  
-                 <div className="w-full lg:w-[55%] h-[700px] relative flex justify-center items-center perspective-[2000px] -mt-10 lg:mt-0">
+                 <div className="w-full lg:w-[55%] h-[550px] md:h-[700px] relative flex justify-center items-center perspective-[2000px] -mt-10 lg:mt-0 transform scale-[0.8] sm:scale-90 md:scale-100 origin-center">
                     <div className="absolute top-[40px] right-[50px] w-[290px] h-[620px] rounded-[48px] p-[6px] bg-white border border-gray-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)]" style={{ transform: 'rotate(8deg)' }}>
                        <div className="w-full h-full bg-gray-50 rounded-[42px] overflow-hidden relative border border-gray-100">
                           <div className="absolute top-[12px] left-1/2 -translate-x-1/2 w-[90px] h-[28px] bg-black rounded-full z-20"></div>
@@ -985,14 +985,14 @@ export default function Page() {
                     Live Prototypes
                  </h3>
                  
-                 <div className="flex flex-col lg:flex-row justify-center items-center gap-16 w-full mt-0">
+                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-16 w-full mt-0">
                     
                     {[
                        { title: "Onboarding", src: "onboarding-feature.mp4" },
                        { title: "Roleplay", src: "roleplay-feature.mp4" },
                        { title: "Roadmap", src: "roadmap-drill-feature.mp4" }
                     ].map((vid, idx) => (
-                       <div key={idx} className="flex flex-col items-center">
+                       <div key={idx} className="flex flex-col items-center transform scale-[0.8] md:scale-100 mb-[-50px] md:mb-0 origin-top">
                           
                           <div className="mb-10 px-8 py-3 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center">
                              <h4 className="font-['Fredoka'] text-[24px] font-bold text-[#334155] tracking-wide">
@@ -1176,7 +1176,7 @@ export default function Page() {
                   
                   <div className="relative w-full max-w-6xl mx-auto group">
                       {/* Carousel Container */}
-                      <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-hidden">
+                      <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center overflow-hidden transform scale-90 md:scale-100">
                           {[
                               "Q&A.jpg", 
                               "THÔNG BÁO KẾT QUẢ.jpg", 
@@ -1377,7 +1377,7 @@ export default function Page() {
                       Digital & Social
                   </h3>
                   
-                  <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center">
+                  <div className="relative w-full h-[400px] sm:h-[450px] md:h-[550px] flex justify-center items-center transform scale-90 md:scale-100">
                       {[
                           "MỞ ĐƠN.jpg",
                           "THÔNG BÁO QUÁN QUÂN.jpg",
@@ -1554,7 +1554,7 @@ export default function Page() {
                   </p>
               </div>
 
-              <div className="relative w-full max-w-[1100px] h-[580px] sm:h-[650px] md:h-[800px] mx-auto mt-4 perspective-[1200px]">
+              <div className="relative w-full max-w-[1100px] h-[480px] sm:h-[650px] md:h-[800px] mx-auto mt-4 perspective-[1200px] transform scale-90 md:scale-100 origin-top">
                   {[
     { title: "MÁC 1", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/1.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/2.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/3.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/4.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%201/LOGO%20MỚI/5.jpg"] },
     { title: "MÁC 2", images: ["/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%201%20LOGO%20MỚI.jpg", "/assets/portfolio_assets/ZODIAC%20COLLECTIONS/Mác%202/ẢNH%202.jpg"] },
