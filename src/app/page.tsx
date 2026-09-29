@@ -5,6 +5,52 @@ import React, { useState, useEffect, useRef } from 'react';
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [hasInteracted, setHasInteracted] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    // Try to play immediately (browsers often block this)
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        setIsPlaying(true);
+        setHasInteracted(true);
+      }).catch((error) => {
+        console.log("Autoplay prevented by browser. Waiting for user interaction.");
+      });
+    }
+
+    // Fallback: play on the very first interaction with the page
+    const playOnInteract = () => {
+      if (!hasInteracted && audio) {
+        audio.play().then(() => {
+          setIsPlaying(true);
+          setHasInteracted(true);
+        }).catch(() => {});
+        
+        document.removeEventListener('click', playOnInteract);
+        document.removeEventListener('keydown', playOnInteract);
+        document.removeEventListener('touchstart', playOnInteract);
+        document.removeEventListener('scroll', playOnInteract);
+      }
+    };
+
+    if (!hasInteracted) {
+      document.addEventListener('click', playOnInteract);
+      document.addEventListener('keydown', playOnInteract);
+      document.addEventListener('touchstart', playOnInteract);
+      document.addEventListener('scroll', playOnInteract, { passive: true });
+    }
+
+    return () => {
+      document.removeEventListener('click', playOnInteract);
+      document.removeEventListener('keydown', playOnInteract);
+      document.removeEventListener('touchstart', playOnInteract);
+      document.removeEventListener('scroll', playOnInteract);
+    };
+  }, [hasInteracted]);
 
   const togglePlay = () => {
     if (audioRef.current) {
@@ -14,12 +60,13 @@ const MusicPlayer = () => {
         audioRef.current.play();
       }
       setIsPlaying(!isPlaying);
+      setHasInteracted(true);
     }
   };
 
   return (
     <div className="fixed bottom-6 left-6 z-[100]">
-      <audio ref={audioRef} loop src="/assets/chill_bg.mp3" preload="auto" />
+      <audio ref={audioRef} loop src="/assets/chill_bg.mp3" preload="auto" autoPlay />
       <button 
         onClick={togglePlay} 
         className="w-14 h-14 bg-white/80 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[3px] border-[#E8E6DD] flex items-center justify-center text-[#2C2822] hover:bg-white hover:scale-105 hover:border-[#2C2822] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 group"
