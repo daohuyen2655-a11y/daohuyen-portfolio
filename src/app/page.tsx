@@ -2,6 +2,45 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 
+const MusicPlayer = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  return (
+    <div className="fixed bottom-6 left-6 z-[100]">
+      <audio ref={audioRef} loop src="/assets/chill_bg.mp3" preload="auto" />
+      <button 
+        onClick={togglePlay} 
+        className="w-14 h-14 bg-white/80 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[3px] border-[#E8E6DD] flex items-center justify-center text-[#2C2822] hover:bg-white hover:scale-105 hover:border-[#2C2822] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 group"
+        aria-label={isPlaying ? "Pause music" : "Play chill music"}
+      >
+        {isPlaying ? (
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="group-hover:text-[#F1934B] transition-colors">
+            <rect x="6" y="4" width="4" height="16" rx="1" />
+            <rect x="14" y="4" width="4" height="16" rx="1" />
+          </svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" className="group-hover:text-[#89B66B] transition-colors ml-1">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        )}
+      </button>
+    </div>
+  );
+};
+
+
 export default function Page() {
   const [mounted, setMounted] = useState(false);
   const [entered, setEntered] = useState(false);
@@ -1892,6 +1931,7 @@ export default function Page() {
              </div>
           </div>
         </footer>
+        <MusicPlayer />
       </div>
     </main>
   );
