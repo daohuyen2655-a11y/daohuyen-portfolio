@@ -784,8 +784,8 @@ export default function Page() {
                  </div>
               </div>
 
-              {/* Grid 4 Columns */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10 w-full justify-items-center">
+              {/* Grid 4 Columns with 3 items centered in second row */}
+              <div className="grid grid-cols-2 lg:grid-cols-8 gap-4 md:gap-10 w-full justify-items-center max-w-[1300px] mx-auto">
                  {[
                     { id: "01", title: "Yapsu AI", color: "#F1934B", anchor: "yapsu-ai" },
                     { id: "02", title: "Chinese Debate '26", color: "#4EC4E1", anchor: "chinese-debate-2026" },
@@ -793,10 +793,10 @@ export default function Page() {
                     { id: "04", title: "19th Anniversary", color: "#A890D8", anchor: "19th-birthday" },
                     { id: "05", title: "Chinese Debate '25", color: "#D4AF37", anchor: "chinese-debate-25" },
                     { id: "06", title: "E-Com Talkshow", color: "#58B3D3", anchor: "talkshow" },
-                    { id: "07", title: "Zodiac", color: "#2C3E50", anchor: "zodiac" },
-                    { id: "08", title: "Paintaso", color: "#E53935", anchor: "paintaso" }
+                    // { id: "07", title: "Zodiac", color: "#2C3E50", anchor: "zodiac" },
+                    { id: "07", title: "Paintaso", color: "#E53935", anchor: "paintaso" }
                  ].map((item, idx) => (
-                    <a key={idx} href={`#${item.anchor}`} className="group relative w-full max-w-[280px] h-[140px] md:h-[180px] block">
+                    <a key={idx} href={`#${item.anchor}`} className={`group relative w-full max-w-[280px] h-[140px] md:h-[180px] block lg:col-span-2 ${idx === 4 ? 'lg:col-start-2' : ''}`}>
                        {/* Shadow / Base layer - solid color matching banner */}
                        <div className="absolute inset-0 bg-[#F9B658] rounded-[28px] translate-y-2 translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-3 group-hover:translate-x-3 transition-all duration-300 border-[3px] border-[#222]"></div>
                        
@@ -1533,10 +1533,18 @@ export default function Page() {
               </div>
 
            </div>
+           
+           {/* Wavy Divider Transition to Paintaso */}
+           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-0">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-16 sm:h-24 md:h-32 block" preserveAspectRatio="none">
+                   <path fill="#EEF8FF" fillOpacity="1" d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,213.3C672,203,768,149,864,138.7C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+               </svg>
+           </div>
         </section>
 
         {/* ─── 07. ZODIAC ─── */}
-        <div className="relative w-full -mt-20 pt-[2px] bg-gradient-to-r from-transparent via-[#C5A059] to-transparent rounded-t-[40px] md:rounded-t-[60px] shadow-[0_-20px_60px_rgba(0,0,0,0.08)] z-30 [clip-path:polygon(-50%_-50%,150%_-50%,150%_100%,-50%_100%)]">
+        {/* <div className="relative w-full -mt-20 pt-[2px] bg-gradient-to-r from-transparent via-[#C5A059] to-transparent rounded-t-[40px] md:rounded-t-[60px] shadow-[0_-20px_60px_rgba(0,0,0,0.08)] z-30 [clip-path:polygon(-50%_-50%,150%_-50%,150%_100%,-50%_100%)]"> */}
+           {false && (
            <section id="zodiac" className="relative w-full pt-32 pb-[200px] md:pb-[250px] bg-gradient-to-b from-[#F9F7F3] via-[#F4F0E8] to-[#EBE4D5] overflow-hidden rounded-t-[38px] md:rounded-t-[58px]">
            
            <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}></div>
@@ -1616,6 +1624,7 @@ export default function Page() {
                </svg>
            </div>
         </section>
+        )}
 
         {/* ─── 08. PAINTASO ─── */}
         <section id="paintaso" className="relative w-full py-24 bg-gradient-to-b from-[#EEF8FF] via-[#DDF3FB] to-[#BEE6F5] overflow-hidden">
@@ -1732,7 +1741,7 @@ export default function Page() {
                </svg>
            </div>
         </section>
-        </div>
+        {/* </div> */}
 
 
         {/* ─── HERO SECTION ─── */}
