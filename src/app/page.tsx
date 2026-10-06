@@ -88,6 +88,36 @@ const MusicPlayer = () => {
 };
 
 
+
+const Tilt = ({ children, className, id }: { children: React.ReactNode, className?: string, id?: string }) => {
+  const [style, setStyle] = React.useState<React.CSSProperties>({});
+  
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { clientX, clientY, currentTarget } = e;
+    const { left, top, width, height } = currentTarget.getBoundingClientRect();
+    const x = (clientX - left) / width - 0.5;
+    const y = (clientY - top) / height - 0.5;
+    const maxRotate = 8;
+    setStyle({
+      transform: `perspective(1000px) rotateY(${x * maxRotate}deg) rotateX(${-y * maxRotate}deg) scale3d(1.02, 1.02, 1.02)`,
+      transition: 'transform 0.1s ease-out'
+    });
+  };
+  
+  const handleMouseLeave = () => {
+    setStyle({
+      transform: `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`,
+      transition: 'transform 0.5s ease-out'
+    });
+  };
+
+  return (
+    <div id={id} className={className} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ ...style, transformStyle: 'preserve-3d', willChange: 'transform' }}>
+      {children}
+    </div>
+  );
+};
+
 export default function Page() {
   const [mounted, setMounted] = useState(false);
   const [entered, setEntered] = useState(false);
@@ -422,7 +452,7 @@ export default function Page() {
            <div className="reveal max-w-[1400px] mx-auto px-6 relative z-20 flex flex-col lg:flex-row gap-12 items-stretch justify-center">
               
               {/* LEFT COLUMN: GREEN PAPER */}
-              <div className="w-full lg:w-[35%] order-2 lg:order-1 bg-[#CBE0A3] py-8 md:py-16 pr-4 md:pr-8 pl-8 md:pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-8 md:gap-16">
+              <Tilt className="w-full lg:w-[35%] order-2 lg:order-1 bg-[#CBE0A3] py-8 md:py-16 pr-4 md:pr-8 pl-8 md:pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-8 md:gap-16">
                  {/* Education Tab */}
                  <div className="relative">
                      <div className="absolute -left-[50px] md:-left-[70px] -top-6 bg-[#537A38] text-white font-['Fredoka'] font-black text-2xl md:text-4xl px-4 md:px-8 py-2 md:py-3 rotate-[-2deg] border-[6px] border-white z-10" style={{ textShadow: '-2px -2px 0 #3A5723, 2px -2px 0 #3A5723, -2px 2px 0 #3A5723, 2px 2px 0 #3A5723, 4px 4px 0px rgba(0,0,0,0.2)' }}>
@@ -541,13 +571,13 @@ export default function Page() {
                      </div>
                  </div>
 
-              </div>
+              </Tilt>
 
               {/* RIGHT COLUMN: INFO CARD & EXPERIENCE */}
               <div className="w-full lg:w-[65%] order-1 lg:order-2 flex flex-col gap-12">
                  
                  {/* TOP CARD: INFO */}
-                 <div id="profile" className="bg-[#FDF9E7] p-5 md:p-12 rounded-[40px] border-[8px] border-white shadow-[12px_12px_0px_rgba(209,205,188,0.5)] relative rotate-[1deg] flex flex-col xl:flex-row gap-12 items-center xl:items-start scroll-mt-24">
+                 <Tilt id="profile" className="bg-[#FDF9E7] p-5 md:p-12 rounded-[40px] border-[8px] border-white shadow-[12px_12px_0px_rgba(209,205,188,0.5)] relative rotate-[1deg] flex flex-col xl:flex-row gap-12 items-center xl:items-start scroll-mt-24">
                     {/* Polaroid Avatar Frame */}
                     <div className="relative shrink-0 rotate-[-3deg] z-20">
                        <div className="bg-white p-4 pb-12 rounded-[16px] shadow-[8px_8px_0px_rgba(0,0,0,0.1)] border-[4px] border-white/50 w-[160px] md:w-[240px]">
@@ -593,10 +623,10 @@ export default function Page() {
                            </a>
                        </div>
                     </div>
-                 </div>
+                 </Tilt>
 
                  {/* BOTTOM CARD: EXPERIENCE (Orange Paper with Notebook Edge) */}
-                 <div className="bg-[#F5D586] p-10 md:p-14 rounded-b-[24px] rounded-t-none border-b-[8px] border-l-[8px] border-r-[8px] border-white shadow-[12px_12px_0px_rgba(209,174,90,0.5)] relative rotate-[-1deg] w-full flex-1 min-h-[300px] mt-6">
+                 <Tilt className="bg-[#F5D586] p-10 md:p-14 rounded-b-[24px] rounded-t-none border-b-[8px] border-l-[8px] border-r-[8px] border-white shadow-[12px_12px_0px_rgba(209,174,90,0.5)] relative rotate-[-1deg] w-full flex-1 min-h-[300px] mt-6">
                     <div className="absolute -top-[24px] left-[-8px] w-[calc(100%+16px)] h-[24px] overflow-hidden drop-shadow-[0_-4px_0_white] z-10">
                        <svg width="100%" height="24" preserveAspectRatio="none">
                           <defs>
@@ -677,7 +707,7 @@ export default function Page() {
                        </div>
 
                     </div>
-                 </div>
+                 </Tilt>
 
               </div>
            </div>
@@ -903,7 +933,8 @@ export default function Page() {
                     // { id: "07", title: "Zodiac", color: "#2C3E50", anchor: "zodiac" },
                     { id: "07", title: "Paintaso", color: "#E53935", anchor: "paintaso" }
                  ].map((item, idx) => (
-                    <a key={idx} href={`#${item.anchor}`} className={`group relative w-full max-w-[280px] h-[140px] md:h-[180px] block lg:col-span-2 ${idx === 4 ? 'lg:col-start-2' : ''}`}>
+                    <Tilt key={idx} className={`w-full max-w-[280px] block lg:col-span-2 ${idx === 4 ? 'lg:col-start-2' : ''}`}>
+                       <a href={`#${item.anchor}`} className="group relative w-full h-[140px] md:h-[180px] block">
                        {/* Shadow / Base layer - solid color matching banner */}
                        <div className="absolute inset-0 bg-[#F9B658] rounded-[28px] translate-y-2 translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-3 group-hover:translate-x-3 transition-all duration-300 border-[3px] border-[#222]"></div>
                        
@@ -924,6 +955,7 @@ export default function Page() {
                           </h3>
                        </div>
                     </a>
+                    </Tilt>
                  ))}
               </div>
            </div>
