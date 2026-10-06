@@ -12,9 +12,9 @@ body {
   cursor: url('/assets/cursor-pencil.svg') 2 2, auto;
 }
 
-/* Ensure clickable elements also use the custom cursor */
-a, button, [role="button"], input, select, textarea {
-  cursor: url('/assets/cursor-pencil.svg') 2 2, pointer;
+/* Force custom cursor globally on all elements */
+* {
+  cursor: url('/assets/cursor-pencil.svg') 2 2, auto !important;
 }
 
 /* Background Halftone Patterns */
@@ -160,3 +160,19 @@ html {
 .animate-fade-in-up {
   animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Scroll Reveal Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Staggered delays for child elements if needed */
+.reveal.delay-100 { transition-delay: 100ms; }
+.reveal.delay-200 { transition-delay: 200ms; }
+.reveal.delay-300 { transition-delay: 300ms; }

@@ -132,7 +132,28 @@ export default function Page() {
     }
   }, [activeGen20Idx]);
 
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    setMounted(true);
+    // Initialize scroll reveal observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Optionally stop observing after it's revealed once
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    // We delay slightly to ensure DOM elements are rendered
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach((el) => {
+        observer.observe(el);
+      });
+    }, 100);
+
+    return () => observer.disconnect();
+  }, [entered]);
   useEffect(() => {
     if (mounted) {
       if (!entered) {
@@ -398,7 +419,7 @@ export default function Page() {
         <section className="relative w-full py-24 bg-[#FDFCEE] overflow-hidden">
            <div className="absolute inset-0 bg-halftone-large opacity-10 pointer-events-none z-0"></div>
 
-           <div className="max-w-[1400px] mx-auto px-6 relative z-20 flex flex-col lg:flex-row gap-12 items-stretch justify-center">
+           <div className="reveal max-w-[1400px] mx-auto px-6 relative z-20 flex flex-col lg:flex-row gap-12 items-stretch justify-center">
               
               {/* LEFT COLUMN: GREEN PAPER */}
               <div className="w-full lg:w-[35%] order-2 lg:order-1 bg-[#CBE0A3] py-8 md:py-16 pr-4 md:pr-8 pl-8 md:pl-12 rounded-[24px] border-[8px] border-white shadow-[12px_12px_0px_rgba(154,181,116,0.6)] relative rotate-[-1deg] flex flex-col gap-8 md:gap-16">
@@ -860,7 +881,7 @@ export default function Page() {
            {/* Background Textures */}
            <div className="absolute inset-0 bg-halftone-large opacity-[0.03] pointer-events-none z-0"></div>
            
-           <div className="max-w-[1200px] mx-auto px-6 relative z-20">
+           <div className="reveal max-w-[1200px] mx-auto px-6 relative z-20">
               
               <div className="flex flex-col items-center mb-24">
                  <div className="relative group">
@@ -914,7 +935,7 @@ export default function Page() {
            {/* Transition from TOC (Beige) to Yapsu (Light) */}
            <div className="absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-[#F6F4EB] to-[#FCFBF9] z-10 pointer-events-none"></div>
            
-           <div className="max-w-[1600px] mx-auto px-4 sm:px-8 relative z-20 flex flex-col">
+           <div className="reveal max-w-[1600px] mx-auto px-4 sm:px-8 relative z-20 flex flex-col">
               
               {/* 1. PRODUCT BRIEF (HERO) */}
               <div className="flex flex-col lg:flex-row items-center justify-between mb-32 gap-16 w-full max-w-[1400px] mx-auto pt-10">
@@ -1120,7 +1141,7 @@ export default function Page() {
     {/* Decorative Tech Grid Background */}
     <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
-    <div className="max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
+    <div className="reveal max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
         
         {/* 1. SECTION HEADER */}
         <div className="flex flex-col items-center mb-24 text-center">
@@ -1209,7 +1230,7 @@ export default function Page() {
 
         {/* ─── 03. GEN 20 RECRUITMENT ─── */}
         <section id="gen-20-recruit" className="relative w-full py-24 bg-gradient-to-b from-[#EAF2E3] via-[#DCEBCE] to-[#C9E0B6] overflow-hidden">
-           <div className="max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
+           <div className="reveal max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
               
               {/* 1. SECTION HEADER */}
               <div className="flex flex-col items-center mb-20 text-center">
@@ -1335,7 +1356,7 @@ export default function Page() {
 
         {/* ─── 04. 19TH ANNIVERSARY ─── */}
         <section id="19th-birthday" className="relative w-full py-24 bg-gradient-to-b from-[#F4EEF7] via-[#EAE1F4] to-[#D5C2ED] overflow-hidden">
-           <div className="max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
+           <div className="reveal max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
               
               {/* 1. SECTION HEADER */}
               <div className="flex flex-col items-center mb-20 text-center">
@@ -1394,7 +1415,7 @@ export default function Page() {
 
         {/* ─── 05. CHINESE DEBATE 2025 ─── */}
         <section id="chinese-debate-25" className="relative w-full py-24 bg-gradient-to-b from-[#4A2C11] via-[#3C230D] to-[#201206] overflow-hidden">
-           <div className="max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
+           <div className="reveal max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
               
               {/* 1. SECTION HEADER */}
               <div className="flex flex-col items-center mb-20 text-center">
@@ -1564,7 +1585,7 @@ export default function Page() {
 
         {/* ─── 06. TALKSHOW ─── */}
         <section id="talkshow" className="relative w-full pt-24 pb-32 bg-gradient-to-b from-[#E8F4F8] via-[#DBEDF4] to-[#BBD9E5] overflow-hidden">
-           <div className="max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
+           <div className="reveal max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
               
               {/* 1. SECTION HEADER */}
               <div className="flex flex-col items-center mb-20 text-center">
@@ -1714,7 +1735,7 @@ export default function Page() {
 
         {/* ─── 08. PAINTASO ─── */}
         <section id="paintaso" className="relative w-full py-24 bg-gradient-to-b from-[#EEF8FF] via-[#DDF3FB] to-[#BEE6F5] overflow-hidden">
-           <div className="max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
+           <div className="reveal max-w-[1400px] mx-auto px-6 sm:px-10 relative z-20 flex flex-col">
 
               {/* 1. SECTION HEADER */}
               <div className="flex flex-col items-center mb-20 text-center">
