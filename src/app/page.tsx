@@ -89,7 +89,7 @@ const MusicPlayer = () => {
 
 
 
-const Tilt = ({ children, className, id }: { children: React.ReactNode, className?: string, id?: string }) => {
+const Tilt = ({ children, className, id, baseTransform = "", style: customStyle = {} }: { children: React.ReactNode, className?: string, id?: string, baseTransform?: string, style?: React.CSSProperties }) => {
   const [style, setStyle] = React.useState<React.CSSProperties>({});
   
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -97,22 +97,24 @@ const Tilt = ({ children, className, id }: { children: React.ReactNode, classNam
     const { left, top, width, height } = currentTarget.getBoundingClientRect();
     const x = (clientX - left) / width - 0.5;
     const y = (clientY - top) / height - 0.5;
-    const maxRotate = 8;
+    const maxRotate = 6;
     setStyle({
-      transform: `perspective(1000px) rotateY(${x * maxRotate}deg) rotateX(${-y * maxRotate}deg) scale3d(1.02, 1.02, 1.02)`,
-      transition: 'transform 0.1s ease-out'
+      transform: `perspective(1000px) rotateY(${x * maxRotate}deg) rotateX(${-y * maxRotate}deg) scale3d(1.02, 1.02, 1.02) ${baseTransform}`,
+      transition: 'transform 0.1s ease-out',
+      zIndex: 50
     });
   };
   
   const handleMouseLeave = () => {
     setStyle({
-      transform: `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`,
-      transition: 'transform 0.5s ease-out'
+      transform: baseTransform || `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`,
+      transition: 'transform 0.5s ease-out',
+      zIndex: 'auto'
     });
   };
 
   return (
-    <div id={id} className={className} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ ...style, transformStyle: 'preserve-3d', willChange: 'transform' }}>
+    <div id={id} className={className} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ ...customStyle, ...style, transformStyle: 'preserve-3d', willChange: 'transform' }}>
       {children}
     </div>
   );
@@ -991,24 +993,24 @@ export default function Page() {
                        </p>
                     </div>
                     
-                    <div className="w-[160px] h-[160px] rounded-[36px] shadow-[0_15px_40px_rgba(0,0,0,0.08)] shrink-0 overflow-hidden bg-white border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
+                    <Tilt className="w-[160px] h-[160px] rounded-[36px] shadow-[0_15px_40px_rgba(0,0,0,0.08)] shrink-0 overflow-hidden bg-white border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
                        <img src="/assets/portfolio_assets/Yapsu%20AI/yapsu_icon_premium.jpg" className="w-full h-full object-cover" />
-                    </div>
+                    </Tilt>
                  </div>
                  
                  <div className="w-full lg:w-[55%] h-[550px] md:h-[700px] relative flex justify-center items-center perspective-[2000px] -mt-10 lg:mt-0 transform scale-[0.8] sm:scale-90 md:scale-100 origin-center">
-                    <div className="absolute top-[40px] right-[50px] w-[290px] h-[620px] rounded-[48px] p-[6px] bg-white border border-gray-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)]" style={{ transform: 'rotate(8deg)' }}>
+                    <Tilt baseTransform="rotate(8deg)" style={{ transform: 'rotate(8deg)' }} className="absolute top-[40px] right-[50px] w-[290px] h-[620px] rounded-[48px] p-[6px] bg-white border border-gray-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)]">
                        <div className="w-full h-full bg-gray-50 rounded-[42px] overflow-hidden relative border border-gray-100">
                           <div className="absolute top-[12px] left-1/2 -translate-x-1/2 w-[90px] h-[28px] bg-black rounded-full z-20"></div>
                           <img src="/assets/portfolio_assets/Yapsu%20AI/snapshots/roadmap_04.jpg" className="w-full h-full object-cover" />
                        </div>
-                    </div>
-                    <div className="absolute top-[120px] left-[50px] w-[310px] h-[660px] rounded-[50px] p-[6px] bg-white border border-gray-200 shadow-[[-20px_30px_60px_rgba(0,0,0,0.15)]] z-10" style={{ transform: 'rotate(-4deg)' }}>
+                    </Tilt>
+                    <Tilt baseTransform="rotate(-4deg)" style={{ transform: 'rotate(-4deg)' }} className="absolute top-[120px] left-[50px] w-[310px] h-[660px] rounded-[50px] p-[6px] bg-white border border-gray-200 shadow-[[-20px_30px_60px_rgba(0,0,0,0.15)]] z-10">
                        <div className="w-full h-full bg-gray-50 rounded-[44px] overflow-hidden relative border border-gray-100">
                           <div className="absolute top-[12px] left-1/2 -translate-x-1/2 w-[95px] h-[30px] bg-black rounded-full z-20"></div>
                           <img src="/assets/portfolio_assets/Yapsu%20AI/snapshots/roadmap_07.jpg" className="w-full h-full object-cover" />
                        </div>
-                    </div>
+                    </Tilt>
                  </div>
               </div>
 
@@ -1193,16 +1195,16 @@ export default function Page() {
             <h3 className="font-['Fredoka'] text-3xl md:text-4xl font-bold text-cyan-400 mb-10 tracking-wide drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">
                 Key Visual
             </h3>
-            <div className="relative w-full max-w-5xl rounded-[24px] overflow-hidden border-2 border-cyan-500/50 shadow-[0_0_40px_rgba(34,211,238,0.2)]">
+            <Tilt className="relative w-full max-w-5xl rounded-[24px] overflow-hidden border-2 border-cyan-500/50 shadow-[0_0_40px_rgba(34,211,238,0.2)]">
                 <img src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/KEY%20VISUAL/cover%20tbth.jpg" alt="Chinese Debate Key Visual Cover" className="w-full h-auto block" />
-            </div>
+            </Tilt>
             
             {/* Avatar Badge */}
-            <div className="relative -mt-16 w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-gradient-to-br from-cyan-400 to-blue-600 shadow-[0_0_30px_rgba(34,211,238,0.5)] z-10 group hover:-translate-y-2 transition-transform duration-300">
+            <Tilt className="relative -mt-16 w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-gradient-to-br from-cyan-400 to-blue-600 shadow-[0_0_30px_rgba(34,211,238,0.5)] z-10 group hover:-translate-y-2 transition-transform duration-300">
                 <div className="w-full h-full rounded-full overflow-hidden bg-[#06112E]">
                     <img src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/KEY%20VISUAL/avatar-01.jpg" alt="Chinese Debate Avatar" className="w-full h-full object-cover" />
                 </div>
-            </div>
+            </Tilt>
         </div>
 
         {/* 3. EVENT APPLICATIONS */}
@@ -1213,16 +1215,16 @@ export default function Page() {
             <div className="w-full max-w-5xl flex flex-col gap-16">
                 {/* Backdrop */}
                 <div className="flex flex-col items-center gap-5">
-                    <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-cyan-900/60 hover:border-cyan-400/80 transition-colors duration-500 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+                    <Tilt className="relative group w-full rounded-[24px] overflow-hidden border-2 border-cyan-900/60 hover:border-cyan-400/80 transition-colors duration-500 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
                         <img src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Print%20&%20Event%20Applications/Backdrop-01.jpg" alt="Backdrop Design" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
-                    </div>
+                    </Tilt>
                     <h4 className="font-['Quicksand'] font-bold text-xl text-cyan-300 tracking-wider uppercase drop-shadow-md">Stage Backdrop</h4>
                 </div>
                 {/* Ticket */}
                 <div className="flex flex-col items-center gap-5">
-                    <div className="relative group w-full max-w-3xl mx-auto rounded-[24px] overflow-hidden border-2 border-cyan-900/60 hover:border-cyan-400/80 transition-colors duration-500 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+                    <Tilt className="relative group w-full max-w-3xl mx-auto rounded-[24px] overflow-hidden border-2 border-cyan-900/60 hover:border-cyan-400/80 transition-colors duration-500 shadow-[0_0_30px_rgba(34,211,238,0.1)]">
                         <img src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Print%20&%20Event%20Applications/TICKET.jpg" alt="Event Ticket" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700 drop-shadow-xl" />
-                    </div>
+                    </Tilt>
                     <h4 className="font-['Quicksand'] font-bold text-xl text-cyan-300 tracking-wider uppercase drop-shadow-md">Event Ticket</h4>
                 </div>
             </div>
@@ -1238,9 +1240,9 @@ export default function Page() {
             <div className="columns-2 lg:columns-3 gap-4 md:gap-6 w-full max-w-7xl mx-auto">
                 
                 {/* Video Block */}
-                <div className="relative rounded-[20px] overflow-hidden border-2 border-cyan-500/50 group shadow-[0_0_20px_rgba(34,211,238,0.2)] break-inside-avoid mb-6 inline-block w-full">
+                <Tilt className="relative rounded-[20px] overflow-hidden border-2 border-cyan-500/50 group shadow-[0_0_20px_rgba(34,211,238,0.2)] break-inside-avoid mb-6 inline-block w-full">
                     <video src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/VIDEO/Video%20công%20bố%20top%206%20chung%20kết_.mp4" autoPlay muted loop playsInline className="w-full h-auto block" />
-                </div>
+                </Tilt>
 
                 {/* Social Posts */}
                 {[
@@ -1250,9 +1252,9 @@ export default function Page() {
                     "Post giới thiệu đại sứ truyền thông.jpg", 
                     "Post mở đơn.jpg"
                 ].map((filename, idx) => (
-                    <div key={idx} className="relative rounded-[20px] overflow-hidden border-2 border-blue-900/60 group hover:border-cyan-400/80 transition-colors duration-300 shadow-md break-inside-avoid mb-6 inline-block w-full">
+                    <Tilt key={idx} className="relative rounded-[20px] overflow-hidden border-2 border-blue-900/60 group hover:border-cyan-400/80 transition-colors duration-300 shadow-md break-inside-avoid mb-6 inline-block w-full">
                         <img src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202026/Social%20Posts/${filename}`} alt={filename.replace('.jpg', '')} className="w-full h-auto block group-hover:scale-105 transition-transform duration-500" />
-                    </div>
+                    </Tilt>
                 ))}
             </div>
         </div>
@@ -1282,16 +1284,16 @@ export default function Page() {
                   <h3 className="font-['Fredoka'] text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#82BA5D] to-[#2A5212] mb-10 tracking-wide" style={{ filter: 'drop-shadow(0px 0px 8px rgba(255,255,255,0.9))' }}>
                       Key Visual
                   </h3>
-                  <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(59,91,53,0.2)] group">
+                  <Tilt className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(59,91,53,0.2)] group">
                       <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/cover%20tuyển%20gen.jpg" alt="Gen 20 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
-                  </div>
+                  </Tilt>
                   
                   {/* Avatar Badge */}
-                  <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300 ">
+                  <Tilt className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300 ">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#D9EBCB]">
                           <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/KEY%20VISUAL/avt%20tuyển%20gen.jpg" alt="Gen 20 Avatar" className="w-full h-full object-cover" />
                       </div>
-                  </div>
+                  </Tilt>
               </div>
 
               {/* 3. EVENT APPLICATIONS */}
@@ -1300,9 +1302,9 @@ export default function Page() {
                       Event Applications
                   </h3>
                   <div className="w-full max-w-lg flex flex-col items-center gap-6">
-                      <div className="relative group w-full rounded-[24px] overflow-hidden border-[6px] border-white shadow-[0_15px_40px_rgba(59,91,53,0.15)] hover:shadow-[0_25px_50px_rgba(59,91,53,0.25)] transition-all duration-500 ">
+                      <Tilt className="relative group w-full rounded-[24px] overflow-hidden border-[6px] border-white shadow-[0_15px_40px_rgba(59,91,53,0.15)] hover:shadow-[0_25px_50px_rgba(59,91,53,0.25)] transition-all duration-500 ">
                           <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%20Gen%2020%20Recruitment/Print%20&%20Event%20Applications/frame.jpg" alt="Avatar Frame" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
-                      </div>
+                      </Tilt>
                       <h4 className="font-['Quicksand'] font-bold text-xl text-[#3B5B35] tracking-wider uppercase mt-4">Avatar Frame</h4>
                   </div>
               </div>
@@ -1408,16 +1410,16 @@ export default function Page() {
                   <h3 className="font-['Fredoka'] text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#D1B3FF] to-[#6A3CC9] mb-10 tracking-wide" style={{ filter: 'drop-shadow(0px 0px 8px rgba(255,255,255,0.9))' }}>
                       Key Visual
                   </h3>
-                  <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(134,101,195,0.2)] group">
+                  <Tilt className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(134,101,195,0.2)] group">
                       <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/cover%20tím.jpg" alt="19th Anniversary Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
-                  </div>
+                  </Tilt>
                   
                   {/* Avatar Badge */}
-                  <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300">
+                  <Tilt className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#E3D5F2]">
                           <img src="/assets/portfolio_assets/CC%20FTU/CC%20FTU%2019th%20Anniversary/Key%20Visual/AVT%20tím.jpg" alt="19th Avatar" className="w-full h-full object-cover" />
                       </div>
-                  </div>
+                  </Tilt>
               </div>
 
               {/* 3. EVENT APPLICATIONS (MASONRY) */}
@@ -1467,16 +1469,16 @@ export default function Page() {
                   <h3 className="font-['Fredoka'] text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#FFF2B2] to-[#D4AF37] mb-10 tracking-wide" style={{ filter: 'drop-shadow(0px 0px 8px rgba(212,175,55,0.4))' }}>
                       Key Visual
                   </h3>
-                  <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.3)] group">
+                  <Tilt className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.3)] group">
                       <img src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/KEY%20VISUAL/cover%20tbth1.jpg" alt="Debate 2025 Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
-                  </div>
+                  </Tilt>
                   
                   {/* Avatar Badge */}
-                  <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.4)] z-10 group hover:-translate-y-2 transition-transform duration-300">
+                  <Tilt className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.4)] z-10 group hover:-translate-y-2 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#231710]">
                           <img src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/KEY%20VISUAL/AVATAR%20TBTH.jpg" alt="Debate Avatar" className="w-full h-full object-cover" />
                       </div>
-                  </div>
+                  </Tilt>
               </div>
 
               {/* 2.5 PRINT & EVENT APPLICATIONS */}
@@ -1487,9 +1489,9 @@ export default function Page() {
                   
                   <div className="w-full max-w-5xl flex flex-col gap-16">
                       <div className="flex flex-col items-center gap-5">
-                          <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
+                          <Tilt className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
                               <img src="/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Print%20&%20Event%20Applications/BACKDROP.jpg" alt="Event Backdrop" className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
-                          </div>
+                          </Tilt>
                           <h4 className="font-['Quicksand'] font-bold text-xl text-[#FFF2B2] tracking-wider uppercase drop-shadow-md">Stage Backdrop</h4>
                       </div>
                       
@@ -1500,9 +1502,9 @@ export default function Page() {
                               { file: "phướn_Thu.jpg", name: "Vertical Banner 3" }
                           ].map((item, idx) => (
                               <div key={idx} className="flex flex-col items-center gap-5 mb-8 shrink-0 snap-center w-[85%] md:w-auto">
-                                  <div className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
+                                  <Tilt className="relative group w-full rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:border-[#F3E5AB] transition-colors duration-500">
                                       <img src={`/assets/portfolio_assets/CC%20FTU/Chinese%20Debate%202025/Print%20&%20Event%20Applications/${item.file}`} alt={item.name} className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700" />
-                                  </div>
+                                  </Tilt>
                                   <h4 className="font-['Quicksand'] font-bold text-lg text-[#FFF2B2] tracking-wider uppercase drop-shadow-md text-center">{item.name}</h4>
                               </div>
                           ))}
@@ -1637,16 +1639,16 @@ export default function Page() {
                   <h3 className="font-['Fredoka'] text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#8DD1E8] to-[#4194B1] mb-10 tracking-wide" style={{ filter: 'drop-shadow(0px 0px 8px rgba(255,255,255,0.9))' }}>
                       Key Visual
                   </h3>
-                  <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(88,179,211,0.2)] group">
+                  <Tilt className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(88,179,211,0.2)] group">
                       <img src="/assets/portfolio_assets/CC%20FTU/Talkshow/KEY%20VISUAL/cover%20nè%2022.04.05.jpg" alt="Talkshow Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
-                  </div>
+                  </Tilt>
                   
                   {/* Avatar Badge */}
-                  <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-[0_15px_40px_rgba(88,179,211,0.3)] z-10 group hover:-translate-y-2 transition-transform duration-300">
+                  <Tilt className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-[0_15px_40px_rgba(88,179,211,0.3)] z-10 group hover:-translate-y-2 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#E8F4F8]">
                           <img src="/assets/portfolio_assets/CC%20FTU/Talkshow/KEY%20VISUAL/avatar.jpg" alt="Talkshow Avatar" className="w-full h-full object-cover" />
                       </div>
-                  </div>
+                  </Tilt>
               </div>
 
               {/* 3. DIGITAL & SOCIAL */}
@@ -1799,15 +1801,15 @@ export default function Page() {
                           Key Visual
                       </h3>
                   </div>
-                  <div className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(58,127,181,0.2)] group">
+                  <Tilt className="relative w-full max-w-5xl rounded-[32px] overflow-hidden border-[4px] border-white shadow-[0_20px_50px_rgba(58,127,181,0.2)] group">
                       <img src="/assets/portfolio_assets/PAINTASO/KEY%20VISUAL/COVER.jpg" alt="Paintaso Key Visual" className="w-full h-auto block group-hover:scale-105 transition-transform duration-700" />
-                  </div>
+                  </Tilt>
                   {/* Avatar Badge */}
-                  <div className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300">
+                  <Tilt className="relative -mt-20 w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-white shadow-xl z-10 group hover:-translate-y-2 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-[#D0EEFA]">
                           <img src="/assets/portfolio_assets/PAINTASO/KEY%20VISUAL/AVATAR.jpg" alt="Paintaso Avatar" className="w-full h-full object-cover" />
                       </div>
-                  </div>
+                  </Tilt>
               </div>
 
               {/* 3. PRINT & EVENT APPLICATIONS — side by side, equal height */}
@@ -1825,16 +1827,16 @@ export default function Page() {
                   <div className="flex flex-row flex-wrap gap-8 justify-center items-start">
                       {/* Flyer — portrait, sets the reference height */}
                       <div className="flex flex-col items-center gap-4">
-                          <div className="rounded-[24px] overflow-hidden border-[4px] border-white shadow-lg group hover:border-[#3A7FB5] transition-colors duration-300" style={{ height: '452px' }}>
+                          <Tilt className="rounded-[24px] overflow-hidden border-[4px] border-white shadow-lg group hover:border-[#3A7FB5] transition-colors duration-300" style={{ height: '452px' }}>
                               <img src="/assets/portfolio_assets/PAINTASO/Print%20&%20Event%20Applications/FLYER%20MỞ%20ĐƠN.jpg" alt="Flyer Mở Đơn" style={{ height: '100%', width: 'auto', display: 'block' }} className="group-hover:scale-105 transition-transform duration-500" />
-                          </div>
+                          </Tilt>
                           <h4 className="font-['Quicksand'] font-bold text-lg text-[#3A7FB5] tracking-wider uppercase text-center bg-white/60 px-6 py-2 rounded-full shadow-sm">Flyer Mở Đơn</h4>
                       </div>
                       {/* Template Story — same height, border hugs naturally */}
                       <div className="flex flex-col items-center gap-4">
-                          <div className="rounded-[24px] overflow-hidden border-[4px] border-white shadow-lg group hover:border-[#3A7FB5] transition-colors duration-300" style={{ height: '452px' }}>
+                          <Tilt className="rounded-[24px] overflow-hidden border-[4px] border-white shadow-lg group hover:border-[#3A7FB5] transition-colors duration-300" style={{ height: '452px' }}>
                               <img src="/assets/portfolio_assets/PAINTASO/Print%20&%20Event%20Applications/TEMPLATES%20STORY.jpg" alt="Templates Story" style={{ height: '100%', width: 'auto', display: 'block' }} className="group-hover:scale-105 transition-transform duration-500" />
-                          </div>
+                          </Tilt>
                           <h4 className="font-['Quicksand'] font-bold text-lg text-[#3A7FB5] tracking-wider uppercase text-center bg-white/60 px-6 py-2 rounded-full shadow-sm">Templates Story</h4>
                       </div>
                   </div>
